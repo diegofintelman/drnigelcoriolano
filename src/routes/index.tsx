@@ -603,7 +603,6 @@ function StickyMobileCTA() {
 function Landing() {
   return (
     <div className="min-h-screen bg-white">
-      <HeaderLogo />
       <main>
         <Hero />
         <Problema />
@@ -620,3 +619,4 @@ function Landing() {
     </div>
   );
 }
+
