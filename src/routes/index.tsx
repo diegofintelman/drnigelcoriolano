@@ -94,19 +94,18 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
 /* ============ HEADER LOGO ============ */
 function HeaderLogo() {
   return (
-    <header className="sticky top-0 z-50 bg-[#060F20]">
-      <div className="mx-auto flex max-w-7xl items-center justify-center px-5 py-4 md:px-8">
-        <a href="/" className="block">
-          <img
-            src={bannerAsset.url}
-            alt="Dr. Nigel Coriolano — Fisioterapeuta"
-            className="h-12 w-auto md:h-16"
-          />
-        </a>
-      </div>
-    </header>
+    <div className="w-full">
+      <a href="/" className="inline-block">
+        <img
+          src={bannerAsset.url}
+          alt="Dr. Nigel Coriolano — Fisioterapeuta"
+          className="h-20 w-auto md:h-24 lg:h-28"
+        />
+      </a>
+    </div>
   );
 }
+
 
 /* ============ HERO ============ */
 function Hero() {
@@ -117,13 +116,15 @@ function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(circle at top right, rgba(196,161,69,0.06), transparent 60%)" }}
       />
-      <div className="relative mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl grid-cols-1 items-center gap-10 px-5 py-16 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
+      <div className="relative mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-16 pt-8 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
         <div>
-          <motion.div {...useFade(0.1)}>
+          <HeaderLogo />
+          <motion.div {...useFade(0.1)} className="mt-8">
             <span className="inline-flex rounded-full border border-[rgba(196,161,69,0.4)] bg-[rgba(196,161,69,0.08)] px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-gold">
               CREFITO-17/190962-F · Paulo Afonso, BA
             </span>
           </motion.div>
+
           <motion.h1 {...useFade(0.2)} className="mt-6 font-serif text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
             Você já tentou de tudo para essa dor passar.
             <br />
@@ -604,7 +605,6 @@ function StickyMobileCTA() {
 function Landing() {
   return (
     <div className="min-h-screen bg-white">
-      <HeaderLogo />
       <main>
         <Hero />
         <Problema />
@@ -621,3 +621,4 @@ function Landing() {
     </div>
   );
 }
+
