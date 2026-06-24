@@ -605,7 +605,7 @@ function StickyMobileCTA() {
 function Landing() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
+      <HeaderLogo />
       <main>
         <Hero />
         <Problema />
