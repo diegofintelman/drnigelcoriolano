@@ -118,10 +118,10 @@ function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(circle at top right, rgba(196,161,69,0.06), transparent 60%)" }}
       />
-      <div className="relative mx-auto grid min-h-[auto] max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-12 pt-4 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-5 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
         <div>
           <HeaderLogo />
-          <motion.div {...useFade(0.1)} className="mt-3">
+          <motion.div {...useFade(0.1)} className="mt-2">
             <span className="inline-flex rounded-full border border-[rgba(196,161,69,0.4)] bg-[rgba(196,161,69,0.08)] px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-gold">
               CREFITO-17/190962-F · Paulo Afonso, BA
             </span>
