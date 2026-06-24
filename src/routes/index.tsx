@@ -35,14 +35,15 @@ const MAPS_URL = "https://maps.app.goo.gl/xCg7DeiKEQLBvfu4A";
 
 function useFade(delay = 0) {
   const reduce = useReducedMotion();
-  if (reduce) return { initial: false, animate: { opacity: 1, y: 0 } };
+  if (reduce) return { initial: false as const, animate: { opacity: 1, y: 0 } };
   return {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.6, ease: "easeOut", delay },
+    transition: { duration: 0.6, ease: "easeOut" as const, delay },
   };
 }
+
 
 function WhatsAppIcon({ className = "" }: { className?: string }) {
   return (
