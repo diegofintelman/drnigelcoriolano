@@ -118,24 +118,24 @@ function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(circle at top right, rgba(196,161,69,0.06), transparent 60%)" }}
       />
-      <div className="relative mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-16 pt-8 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
+      <div className="relative mx-auto grid min-h-[auto] max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-12 pt-4 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
         <div>
           <HeaderLogo />
-          <motion.div {...useFade(0.1)} className="mt-8">
+          <motion.div {...useFade(0.1)} className="mt-3">
             <span className="inline-flex rounded-full border border-[rgba(196,161,69,0.4)] bg-[rgba(196,161,69,0.08)] px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-gold">
               CREFITO-17/190962-F · Paulo Afonso, BA
             </span>
           </motion.div>
 
-          <motion.h1 {...useFade(0.2)} className="mt-6 font-serif text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
+          <motion.h1 {...useFade(0.2)} className="mt-4 font-serif text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
             Você já tentou de tudo para essa dor passar.
             <br />
             <span className="text-gold">Ela voltou.</span>
           </motion.h1>
-          <motion.p {...useFade(0.3)} className="mt-6 max-w-lg font-sans text-base text-slate-300 md:text-lg">
+          <motion.p {...useFade(0.3)} className="mt-4 max-w-lg font-sans text-base text-slate-300 md:text-lg">
             Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação real, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
           </motion.p>
-          <motion.div {...useFade(0.4)} className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <motion.div {...useFade(0.4)} className="mt-6 flex flex-col gap-3 sm:flex-row">
             <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
             <a
               href="#especialidades"
@@ -144,7 +144,7 @@ function Hero() {
               Ver especialidades ↓
             </a>
           </motion.div>
-          <motion.ul {...useFade(0.5)} className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
+          <motion.ul {...useFade(0.5)} className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
             {[
               "Especialista em coluna e dor crônica",
               "Tratamento sem medicamentos",
