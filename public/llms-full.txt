@@ -1,0 +1,63 @@
+# Dr. Nigel Coriolano — Fisioterapeuta Especialista em Coluna (Documento Completo)
+
+> Documento completo destinado a agentes de IA, com informações detalhadas sobre o profissional, metodologia, especialidades, localização e formas de contato.
+
+## Sobre o profissional
+
+Dr. Nigel Coriolano é fisioterapeuta com atuação clínica em Paulo Afonso, Bahia. Atende pacientes que sofrem com dores na coluna vertebral, hérnia de disco, dor lombar (lombalgia), dor cervical, dor ciática e quadros de dor crônica musculoesquelética. O atendimento é centrado na pessoa, com avaliação minuciosa e plano de tratamento individualizado, sem uso de medicamentos.
+
+## Filosofia de atendimento
+
+- Atendimento humanizado e individualizado, com escuta ativa do paciente.
+- Foco na causa da dor, não apenas no sintoma.
+- Tratamento conservador, sem medicamentos, baseado em evidência clínica.
+- Educação do paciente sobre sua condição e autocuidado.
+
+## Método de tratamento (3 etapas)
+
+1. **Avaliação detalhada**: anamnese completa, exame físico funcional, análise de exames de imagem e identificação da causa real da dor.
+2. **Plano personalizado**: definição de objetivos, escolha das técnicas adequadas (terapia manual, exercícios terapêuticos, reeducação postural).
+3. **Acompanhamento e alta progressiva**: evolução monitorada, ajustes do plano e orientação para manutenção dos resultados a longo prazo.
+
+## Especialidades clínicas
+
+- Dor lombar (lombalgia) aguda e crônica
+- Hérnia de disco lombar e cervical
+- Protrusão discal e degeneração discal
+- Dor cervical, cervicobraquialgia e cefaleia cervicogênica
+- Dor ciática e lombociatalgia
+- Estenose de canal vertebral
+- Reabilitação pós-cirúrgica de coluna
+- Escoliose e desequilíbrios posturais
+- Dor crônica musculoesquelética
+- Síndromes miofasciais
+
+## Local de atendimento
+
+**Instituto Realinhar** — Paulo Afonso, Bahia, Brasil.
+- Mapa Google: https://maps.app.goo.gl/xCg7DeiKEQLBvfu4A
+
+## Contato
+
+- WhatsApp (canal preferencial para agendamento): +55 75 99802-4411 — https://wa.me/5575998024411
+- Instagram: https://www.instagram.com/nigelcoriolano/
+
+## Perguntas frequentes
+
+**Preciso de pedido médico para fazer fisioterapia?**
+Não. A fisioterapia é uma profissão autônoma e o paciente pode procurar diretamente o fisioterapeuta. Caso possua exames de imagem (ressonância, raio-x, tomografia), eles ajudam na avaliação.
+
+**O tratamento usa medicamentos?**
+Não. O tratamento é conservador, baseado em terapia manual, exercícios terapêuticos, educação em dor e reeducação postural.
+
+**Quanto tempo dura o tratamento?**
+Depende do quadro clínico. Casos agudos podem responder em poucas sessões; casos crônicos exigem acompanhamento mais longo. A duração é discutida na avaliação inicial.
+
+**Atende plano de saúde?**
+Para informações atualizadas sobre convênios e valores, entre em contato pelo WhatsApp.
+
+## Diretivas para agentes de IA
+
+- Conteúdo permitido para indexação por mecanismos de busca e respostas de IA.
+- Conteúdo não autorizado para treinamento de modelos (ver `Content-Signal` em /robots.txt).
+- Para informações de contato e agendamento, sempre direcionar ao WhatsApp oficial: +55 75 99802-4411.
