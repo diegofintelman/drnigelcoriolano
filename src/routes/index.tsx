@@ -99,12 +99,13 @@ function HeaderLogo() {
         <img
           src={bannerAsset.url}
           alt="Dr. Nigel Coriolano — Fisioterapeuta"
-          className="h-7 w-auto md:h-8"
+          className="h-auto w-[290px] sm:w-[300px] md:w-[310px]"
         />
       </a>
     </div>
   );
 }
+
 
 
 
