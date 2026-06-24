@@ -13,6 +13,7 @@ import fotoQuemSouEu from "@/assets/quem_sou_eu.asset.json";
 import fotoAnatomia from "@/assets/foto_anatomia.asset.json";
 import fotoRealinhar from "@/assets/foto_realinhar.asset.json";
 import logoNavbar from "@/assets/logo_navbar.asset.json";
+import bannerAsset from "@/assets/Banner.png.asset.json";
 import logoFooter from "@/assets/logo_footer.asset.json";
 import institutoRealinhar from "@/assets/instituto_realinhar.asset.json";
 
