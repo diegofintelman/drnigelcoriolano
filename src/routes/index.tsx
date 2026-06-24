@@ -165,7 +165,7 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.3 }}
           className="relative lg:-translate-y-6"
         >
           <div className="overflow-hidden rounded-2xl border border-[rgba(196,161,69,0.2)] bg-gradient-to-br from-[#1A3D73] to-[#0D2B5C] aspect-[4/3] lg:aspect-[3/4]">
