@@ -94,19 +94,18 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
 /* ============ HEADER LOGO ============ */
 function HeaderLogo() {
   return (
-    <header className="sticky top-0 z-50 bg-[#060F20]">
-      <div className="mx-auto flex max-w-7xl items-center justify-center px-5 py-4 md:px-8">
-        <a href="/" className="block">
-          <img
-            src={bannerAsset.url}
-            alt="Dr. Nigel Coriolano — Fisioterapeuta"
-            className="h-12 w-auto md:h-16"
-          />
-        </a>
-      </div>
-    </header>
+    <div className="w-full">
+      <a href="/" className="inline-block">
+        <img
+          src={bannerAsset.url}
+          alt="Dr. Nigel Coriolano — Fisioterapeuta"
+          className="h-20 w-auto md:h-24 lg:h-28"
+        />
+      </a>
+    </div>
   );
 }
+
 
 /* ============ HERO ============ */
 function Hero() {
