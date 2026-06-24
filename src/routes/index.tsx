@@ -92,28 +92,20 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
   );
 }
 
-/* ============ NAVBAR ============ */
-function Navbar() {
+/* ============ HEADER LOGO ============ */
+function HeaderLogo() {
   return (
-    <nav className="sticky top-0 z-50 bg-[#060F20] border-b border-[rgba(196,161,69,0.15)]">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <div className="flex items-center gap-3 min-w-0">
-          <img src={logoNavbar.url} alt="" className="h-9 w-9 shrink-0" />
-          <div className="min-w-0">
-            <div className="font-serif text-lg sm:text-xl text-gold leading-none truncate">Dr. Nigel Coriolano</div>
-            <div className="hidden md:block font-mono text-xs text-slate-400 mt-0.5">Fisioterapeuta</div>
-          </div>
-        </div>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shrink-0 rounded-full bg-gold px-4 py-2 text-xs sm:text-sm font-sans font-semibold text-[#060F20] transition hover:bg-gold-light sm:px-5"
-        >
-          Agendar Avaliação <span aria-hidden>→</span>
+    <header className="sticky top-0 z-50 bg-[#060F20]">
+      <div className="mx-auto flex max-w-7xl items-center justify-center px-5 py-4 md:px-8">
+        <a href="/" className="block">
+          <img
+            src={bannerAsset.url}
+            alt="Dr. Nigel Coriolano — Fisioterapeuta"
+            className="h-12 w-auto md:h-16"
+          />
         </a>
       </div>
-    </nav>
+    </header>
   );
 }
 
