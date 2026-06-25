@@ -574,7 +574,7 @@ function Faq() {
 /* ============ FOOTER ============ */
 function Footer() {
   return (
-    <footer className="bg-[#060F20] border-t border-[rgba(196,161,69,0.15)] py-12 md:py-16 pb-24 md:pb-16">
+    <footer className="bg-[#060F20] border-t border-[rgba(196,161,69,0.15)] py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
@@ -614,20 +614,6 @@ function Footer() {
   );
 }
 
-/* ============ STICKY MOBILE CTA ============ */
-function StickyMobileCTA() {
-  return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 w-full bg-[#25D366] px-6 py-4 text-center font-sans font-bold text-base text-white"
-      style={{ boxShadow: "0 -4px 20px rgba(37,211,102,0.3)" }}
-    >
-      📞 Agendar Avaliação Agora
-    </a>
-  );
-}
 
 function Landing() {
   return (
@@ -644,8 +630,8 @@ function Landing() {
         <Faq />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </div>
   );
 }
+
 
