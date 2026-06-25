@@ -133,7 +133,7 @@ function Hero() {
             <span className="text-gold">Ela voltou.</span>
           </motion.h1>
           <motion.p {...useFade(0.3)} className="mt-4 max-w-lg font-sans text-base text-slate-300 md:text-lg">
-            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação real, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
           </motion.p>
           <motion.div {...useFade(0.4)} className="mt-6 flex flex-col gap-3 sm:flex-row">
             <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
