@@ -372,7 +372,7 @@ function Depoimentos() {
           <Eyebrow center>RESULTADOS REAIS</Eyebrow>
           <h2 className="font-serif text-3xl text-navy md:text-4xl">O que os pacientes dizem</h2>
           <p className="mx-auto mt-4 mb-14 max-w-2xl font-sans text-lg text-brand-muted">
-            Depoimentos de pessoas que buscaram tratamento especializado e encontraram um caminho real para sair da dor.
+            Depoimentos de pessoas que buscaram tratamento especializado e encontraram um caminho consistente para sair da dor.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
