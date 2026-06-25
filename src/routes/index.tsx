@@ -614,20 +614,6 @@ function Footer() {
   );
 }
 
-/* ============ STICKY MOBILE CTA ============ */
-function StickyMobileCTA() {
-  return (
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-50 w-full bg-[#25D366] px-6 py-4 text-center font-sans font-bold text-base text-white"
-      style={{ boxShadow: "0 -4px 20px rgba(37,211,102,0.3)" }}
-    >
-      📞 Agendar Avaliação Agora
-    </a>
-  );
-}
 
 function Landing() {
   return (
