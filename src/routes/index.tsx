@@ -321,7 +321,7 @@ function Metodo() {
 /* ============ ESPECIALIDADES ============ */
 function Especialidades() {
   const items = [
-    { icon: AlertTriangle, title: "Dor Lombar e Lombalgia", desc: "Tratamento da dor nas costas aguda ou crônica, com foco na causa real — não só no alívio momentâneo." },
+    { icon: AlertTriangle, title: "Dor Lombar e Lombalgia", desc: "Tratamento da dor nas costas aguda ou crônica, com foco na causa do problema — não só no alívio momentâneo." },
     { icon: Layers, title: "Hérnia de Disco", desc: "Abordagem conservadora e eficaz para hérnia lombar e cervical, sem cirurgia como primeira opção." },
     { icon: ArrowDownRight, title: "Cervicalgia e Cervicobraquialgia", desc: "Dor no pescoço que irradia para braços e mãos — com ou sem formigamento. Causa e tratamento específicos." },
     { icon: Repeat, title: "Dor Crônica", desc: "Dor que persiste por mais de 3 meses merece uma abordagem diferente. Nem toda dor crônica aparece no exame — mas todas têm tratamento." },
