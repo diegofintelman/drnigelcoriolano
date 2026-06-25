@@ -180,7 +180,7 @@ function Problema() {
     { icon: AlertCircle, title: "Hérnia de disco diagnosticada", desc: "Você tem o diagnóstico na mão, mas ninguém explicou direito o que fazer — e tem medo do que pode acontecer." },
     { icon: RefreshCw, title: "Tratamentos que não sustentam", desc: "Melhora por algumas semanas, mas a dor volta sempre que você volta à rotina normal." },
     { icon: Clock, title: "Dor que não passa com repouso", desc: "Mesmo descansando o fim de semana inteiro, a dor persiste — ou piora ao ficar parado por muito tempo." },
-    { icon: Brain, title: "Dor crônica sem explicação clara", desc: "Exames que dizem 'tudo normal', mas você sente que algo está errado. A dor é real — e pode ser tratada." },
+    { icon: Brain, title: "Dor crônica sem explicação clara", desc: "Exames que dizem 'tudo normal', mas você sente que algo está errado. A dor é verdadeira — e pode ser tratada." },
   ];
   return (
     <Section id="problema" bg="cream" className="py-20 md:py-28">
