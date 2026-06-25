@@ -292,7 +292,7 @@ function Metodo() {
             não para o exame.
           </h2>
           <p className="mx-auto mt-4 mb-16 max-w-xl font-sans text-base text-slate-300">
-            A maioria das pessoas com dor crônica já fez múltiplos tratamentos. O que falta não é mais tentativa — é um processo estruturado, individualizado e com acompanhamento real.
+            A maioria das pessoas com dor crônica já fez múltiplos tratamentos. O que falta não é mais tentativa — é um processo estruturado, individualizado e com acompanhamento próximo.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
