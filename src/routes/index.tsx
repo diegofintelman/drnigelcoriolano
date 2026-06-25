@@ -133,7 +133,7 @@ function Hero() {
             <span className="text-gold">Ela voltou.</span>
           </motion.h1>
           <motion.p {...useFade(0.3)} className="mt-4 max-w-lg font-sans text-base text-slate-300 md:text-lg">
-            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação real, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
           </motion.p>
           <motion.div {...useFade(0.4)} className="mt-6 flex flex-col gap-3 sm:flex-row">
             <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
@@ -180,7 +180,7 @@ function Problema() {
     { icon: AlertCircle, title: "Hérnia de disco diagnosticada", desc: "Você tem o diagnóstico na mão, mas ninguém explicou direito o que fazer — e tem medo do que pode acontecer." },
     { icon: RefreshCw, title: "Tratamentos que não sustentam", desc: "Melhora por algumas semanas, mas a dor volta sempre que você volta à rotina normal." },
     { icon: Clock, title: "Dor que não passa com repouso", desc: "Mesmo descansando o fim de semana inteiro, a dor persiste — ou piora ao ficar parado por muito tempo." },
-    { icon: Brain, title: "Dor crônica sem explicação clara", desc: "Exames que dizem 'tudo normal', mas você sente que algo está errado. A dor é real — e pode ser tratada." },
+    { icon: Brain, title: "Dor crônica sem explicação clara", desc: "Exames que dizem 'tudo normal', mas você sente que algo está errado. A dor é verdadeira — e pode ser tratada." },
   ];
   return (
     <Section id="problema" bg="cream" className="py-20 md:py-28">
@@ -246,7 +246,7 @@ function Bio() {
               Sou fisioterapeuta com especialização em coluna vertebral, dor lombar, cervicalgia, hérnia de disco e dor crônica. Minha abordagem é simples: você merece entender o que está acontecendo com o seu corpo e receber um plano de tratamento que faça sentido para a sua vida — não uma receita genérica que todo mundo recebe.
             </p>
             <p>
-              Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída real para a dor, sem depender de medicamentos indefinidamente.
+              Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída definitiva para a dor, sem depender de medicamentos indefinidamente.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -273,7 +273,7 @@ function Bio() {
 function Metodo() {
   const steps = [
     { n: "01", icon: ClipboardList, title: "Avaliação individualizada", desc: "Não começo pelo protocolo. Começo pela sua história. Exames, hábitos, histórico de dor e limitações reais da sua rotina." },
-    { n: "02", icon: Target, title: "Plano de tratamento personalizado", desc: "Com base na avaliação, montamos juntos um plano real — com frequência, técnicas e objetivos claros. Sem promessas que não posso cumprir." },
+    { n: "02", icon: Target, title: "Plano de tratamento personalizado", desc: "Com base na avaliação, montamos juntos um plano concreto — com frequência, técnicas e objetivos claros. Sem promessas que não posso cumprir." },
     { n: "03", icon: TrendingUp, title: "Acompanhamento até o resultado", desc: "Monitoro a sua evolução a cada sessão. Se precisar ajustar o plano, ajustamos. O objetivo é resultado, não manutenção indefinida." },
   ];
   return (
@@ -292,7 +292,7 @@ function Metodo() {
             não para o exame.
           </h2>
           <p className="mx-auto mt-4 mb-16 max-w-xl font-sans text-base text-slate-300">
-            A maioria das pessoas com dor crônica já fez múltiplos tratamentos. O que falta não é mais tentativa — é um processo estruturado, individualizado e com acompanhamento real.
+            A maioria das pessoas com dor crônica já fez múltiplos tratamentos. O que falta não é mais tentativa — é um processo estruturado, individualizado e com acompanhamento próximo.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -321,7 +321,7 @@ function Metodo() {
 /* ============ ESPECIALIDADES ============ */
 function Especialidades() {
   const items = [
-    { icon: AlertTriangle, title: "Dor Lombar e Lombalgia", desc: "Tratamento da dor nas costas aguda ou crônica, com foco na causa real — não só no alívio momentâneo." },
+    { icon: AlertTriangle, title: "Dor Lombar e Lombalgia", desc: "Tratamento da dor nas costas aguda ou crônica, com foco na causa do problema — não só no alívio momentâneo." },
     { icon: Layers, title: "Hérnia de Disco", desc: "Abordagem conservadora e eficaz para hérnia lombar e cervical, sem cirurgia como primeira opção." },
     { icon: ArrowDownRight, title: "Cervicalgia e Cervicobraquialgia", desc: "Dor no pescoço que irradia para braços e mãos — com ou sem formigamento. Causa e tratamento específicos." },
     { icon: Repeat, title: "Dor Crônica", desc: "Dor que persiste por mais de 3 meses merece uma abordagem diferente. Nem toda dor crônica aparece no exame — mas todas têm tratamento." },
@@ -372,7 +372,7 @@ function Depoimentos() {
           <Eyebrow center>RESULTADOS REAIS</Eyebrow>
           <h2 className="font-serif text-3xl text-navy md:text-4xl">O que os pacientes dizem</h2>
           <p className="mx-auto mt-4 mb-14 max-w-2xl font-sans text-lg text-brand-muted">
-            Depoimentos de pessoas que buscaram tratamento especializado e encontraram um caminho real para sair da dor.
+            Depoimentos de pessoas que buscaram tratamento especializado e encontraram um caminho consistente para sair da dor.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
