@@ -113,34 +113,58 @@ function HeaderLogo() {
 /* ============ HERO ============ */
 function Hero() {
   return (
-    <Section bg="navy-dark" className="overflow-hidden">
+    <Section bg="white" className="relative overflow-hidden">
+      {/* Background image com fit-cover */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(circle at top right, rgba(196,161,69,0.06), transparent 60%)" }}
+        className="absolute inset-0 -z-20"
+        style={{
+          backgroundImage: `url(${backgroundAsset.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+        }}
       />
+      {/* Blur brand (gold) behind text column */}
+      <div
+        aria-hidden
+        className="absolute top-0 left-0 h-full w-full lg:w-[62%] -z-10"
+        style={{
+          background: "linear-gradient(90deg, rgba(248,245,240,0.92) 0%, rgba(248,245,240,0.82) 55%, rgba(248,245,240,0.35) 100%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute top-1/4 left-8 h-72 w-72 -translate-y-1/2 rounded-full bg-gold/20 blur-3xl -z-10 lg:left-16 lg:h-96 lg:w-96"
+      />
+
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-5 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
-        <div>
+        <div className="relative">
+          {/* Frosted panel behind copy */}
+          <div
+            aria-hidden
+            className="absolute -inset-4 rounded-2xl bg-cream/40 backdrop-blur-md -z-10 md:-inset-6"
+          />
           <HeaderLogo />
           <motion.div {...useFade(0.1)} className="mt-2">
-            <span className="inline-flex rounded-full border border-[rgba(196,161,69,0.4)] bg-[rgba(196,161,69,0.08)] px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-gold">
+            <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-navy-dark">
               CREFITO-17/190962-F · Paulo Afonso, BA
             </span>
           </motion.div>
 
-          <motion.h1 {...useFade(0.2)} className="mt-4 font-serif text-4xl leading-tight text-white md:text-5xl lg:text-6xl">
+          <motion.h1 {...useFade(0.2)} className="mt-4 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-6xl">
             Você já tentou de tudo para essa dor passar.
             <br />
             <span className="text-gold">Ela voltou.</span>
           </motion.h1>
-          <motion.p {...useFade(0.3)} className="mt-4 max-w-lg font-sans text-base text-slate-300 md:text-lg">
+          <motion.p {...useFade(0.3)} className="mt-4 max-w-lg font-sans text-base text-brand-text md:text-lg">
             Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
           </motion.p>
           <motion.div {...useFade(0.4)} className="mt-6 flex flex-col gap-3 sm:flex-row">
             <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
             <a
               href="#especialidades"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-transparent px-7 py-3.5 font-sans font-medium text-white transition hover:bg-white/5"
+              className="inline-flex items-center justify-center rounded-full border border-navy/20 bg-transparent px-7 py-3.5 font-sans font-medium text-navy transition hover:bg-navy/5"
             >
               Ver especialidades ↓
             </a>
@@ -151,7 +175,7 @@ function Hero() {
               "Tratamento sem medicamentos",
               "Avaliação individualizada",
             ].map((t) => (
-              <li key={t} className="flex items-center gap-2 font-mono text-xs text-slate-400">
+              <li key={t} className="flex items-center gap-2 font-mono text-xs text-brand-muted">
                 <Check className="h-4 w-4 text-gold" /> {t}
               </li>
             ))}
@@ -164,7 +188,7 @@ function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.3 }}
           className="relative lg:-translate-y-6"
         >
-          <div className="overflow-hidden rounded-2xl border border-[rgba(196,161,69,0.2)] bg-gradient-to-br from-[#1A3D73] to-[#0D2B5C] aspect-[4/3] lg:aspect-[3/4]">
+          <div className="overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-br from-[#1A3D73] to-[#0D2B5C] aspect-[4/3] lg:aspect-[3/4]">
             <img src={fotoHero.url} alt="Dr. Nigel Coriolano, fisioterapeuta" className="h-full w-full object-cover object-top" />
           </div>
         </motion.div>
