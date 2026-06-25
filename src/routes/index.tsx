@@ -574,7 +574,7 @@ function Faq() {
 /* ============ FOOTER ============ */
 function Footer() {
   return (
-    <footer className="bg-[#060F20] border-t border-[rgba(196,161,69,0.15)] py-12 md:py-16 pb-24 md:pb-16">
+    <footer className="bg-[#060F20] border-t border-[rgba(196,161,69,0.15)] py-12 md:py-16">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
@@ -630,8 +630,8 @@ function Landing() {
         <Faq />
       </main>
       <Footer />
-      <StickyMobileCTA />
     </div>
   );
 }
+
 
