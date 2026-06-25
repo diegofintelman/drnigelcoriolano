@@ -246,7 +246,7 @@ function Bio() {
               Sou fisioterapeuta com especialização em coluna vertebral, dor lombar, cervicalgia, hérnia de disco e dor crônica. Minha abordagem é simples: você merece entender o que está acontecendo com o seu corpo e receber um plano de tratamento que faça sentido para a sua vida — não uma receita genérica que todo mundo recebe.
             </p>
             <p>
-              Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída real para a dor, sem depender de medicamentos indefinidamente.
+              Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída definitiva para a dor, sem depender de medicamentos indefinidamente.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
