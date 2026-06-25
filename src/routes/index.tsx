@@ -273,7 +273,7 @@ function Bio() {
 function Metodo() {
   const steps = [
     { n: "01", icon: ClipboardList, title: "Avaliação individualizada", desc: "Não começo pelo protocolo. Começo pela sua história. Exames, hábitos, histórico de dor e limitações reais da sua rotina." },
-    { n: "02", icon: Target, title: "Plano de tratamento personalizado", desc: "Com base na avaliação, montamos juntos um plano real — com frequência, técnicas e objetivos claros. Sem promessas que não posso cumprir." },
+    { n: "02", icon: Target, title: "Plano de tratamento personalizado", desc: "Com base na avaliação, montamos juntos um plano concreto — com frequência, técnicas e objetivos claros. Sem promessas que não posso cumprir." },
     { n: "03", icon: TrendingUp, title: "Acompanhamento até o resultado", desc: "Monitoro a sua evolução a cada sessão. Se precisar ajustar o plano, ajustamos. O objetivo é resultado, não manutenção indefinida." },
   ];
   return (
