@@ -238,7 +238,7 @@ function Problema() {
               <motion.div
                 key={c.title}
                 {...useFade(i * 0.1)}
-                className="relative overflow-hidden rounded-xl border border-brand-border bg-white p-6"
+                className="relative isolate overflow-hidden rounded-xl border border-brand-border bg-white p-6"
               >
                 {bgUrl && (
                   <>
