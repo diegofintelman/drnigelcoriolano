@@ -101,8 +101,8 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
 /* ============ HEADER LOGO ============ */
 function HeaderLogo() {
   return (
-    <div className="w-full">
-      <a href="/" className="inline-block">
+    <div className="w-full leading-none">
+      <a href="/" className="block leading-none">
         <img
           src={bannerAsset.url}
           alt="Dr. Nigel Coriolano — Fisioterapeuta"
