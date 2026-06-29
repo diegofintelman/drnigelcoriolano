@@ -132,6 +132,14 @@ function Hero() {
         }}
       />
       {/* Blur brand (gold) behind text column */}
+      <div
+        aria-hidden
+        className="absolute top-0 left-0 h-full w-full lg:w-[62%] -z-10"
+        style={{
+          background: "linear-gradient(90deg, rgba(248,245,240,0.92) 0%, rgba(248,245,240,0.82) 55%, rgba(248,245,240,0.35) 100%)",
+        }}
+      />
+
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-5 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
         <div className="relative">
           <HeaderLogo />
