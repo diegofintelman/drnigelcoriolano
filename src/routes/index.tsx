@@ -643,7 +643,7 @@ function Instituto() {
           <div className="relative -mt-[45%] px-5 md:px-8 pb-12">
             <motion.div {...useFade(0.1)}>
               <div className="grid grid-cols-2 items-end gap-10">
-                <div className="rounded-xl bg-navy-dark/40 p-6 backdrop-blur-[2px]">
+                <div className="rounded-xl bg-navy-dark/70 p-6 backdrop-blur-sm">
                   <InstitutoContent />
                 </div>
                 <div className="flex justify-end">
