@@ -309,7 +309,7 @@ function Bio() {
     <Section id="sobre" bg="white" className="pt-0 pb-20 md:py-28">
       <div className="mx-auto max-w-6xl md:px-8">
         {/* Mobile: imagem full-bleed no topo, sem quadro, texto sobreposto com gradiente */}
-        <div className="lg:hidden relative">
+        <div className="lg:hidden relative -mx-5 md:-mx-8">
           <div className="relative w-full" style={{ aspectRatio: "3/4" }}>
             <img
               src={fotoQuemSouEu.url}
