@@ -225,20 +225,27 @@ function Problema() {
         </motion.div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {cards.map((c, i) => {
-            const isLombar = i === 0;
-            const isPescoco = i === 1;
+            const bgMap: Record<number, string> = {
+              0: dorLombarAsset.url,
+              1: dorPescocoAsset.url,
+              2: herniaDiscoAsset.url,
+              3: tratamentoNaoSustentaAsset.url,
+              4: dorRepousoAsset.url,
+              5: dorCronicaAsset.url,
+            };
+            const bgUrl = bgMap[i];
             return (
               <motion.div
                 key={c.title}
                 {...useFade(i * 0.1)}
                 className="relative overflow-hidden rounded-xl border border-brand-border bg-white p-6"
               >
-                {(isLombar || isPescoco) && (
+                {bgUrl && (
                   <>
                     <div
                       aria-hidden
                       className="absolute inset-0 -z-20 bg-cover bg-center opacity-25"
-                      style={{ backgroundImage: `url(${isLombar ? dorLombarAsset.url : dorPescocoAsset.url})` }}
+                      style={{ backgroundImage: `url(${bgUrl})` }}
                     />
                     <div
                       aria-hidden
