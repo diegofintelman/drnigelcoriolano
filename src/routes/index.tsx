@@ -131,7 +131,7 @@ function Hero() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      {/* Blur brand (gold) behind text column */}
+      {/* Gradient overlay for readability */}
       <div
         aria-hidden
         className="absolute top-0 left-0 h-full w-full lg:w-[62%] -z-10"
