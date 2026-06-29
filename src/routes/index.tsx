@@ -152,15 +152,15 @@ function Hero() {
               </span>
             </motion.div>
 
-            <motion.h1 {...useFade(0.2)} className="mt-3 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+            <motion.h1 {...useFade(0.2)} className="mt-2 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
               Você já tentou de tudo para essa dor passar.
               <br />
               <span className="text-gold">Ela voltou.</span>
             </motion.h1>
-            <motion.p {...useFade(0.3)} className="mt-3 max-w-lg font-sans text-base text-brand-text md:text-lg">
+            <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-brand-text md:text-lg">
               Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
             </motion.p>
-            <motion.div {...useFade(0.4)} className="mt-5">
+            <motion.div {...useFade(0.4)} className="mt-4">
               <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
             </motion.div>
           </div>
