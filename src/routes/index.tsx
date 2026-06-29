@@ -153,18 +153,18 @@ function Hero() {
           <HeaderLogo />
 
           <motion.div {...useFade(0.1)} className="mt-1">
-            <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-primary-foreground">
+            <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-primary-foreground text-shadow-hero">
               CREFITO-17/190962-F · Paulo Afonso, BA
             </span>
           </motion.div>
 
-          <motion.h1 {...useFade(0.2)} className="mt-2 font-serif text-4xl leading-tight text-primary-foreground">
+          <motion.h1 {...useFade(0.2)} className="text-shadow-hero mt-2 font-serif text-4xl leading-tight text-primary-foreground">
             Você já tentou de tudo para essa dor passar.
             <br />
             <span className="text-gold">Ela voltou.</span>
           </motion.h1>
 
-          <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-primary-foreground">
+          <motion.p {...useFade(0.3)} className="text-shadow-hero mt-2 max-w-lg font-sans text-base text-primary-foreground">
             Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
           </motion.p>
 
