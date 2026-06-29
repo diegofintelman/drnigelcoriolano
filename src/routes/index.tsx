@@ -16,6 +16,7 @@ import bannerAsset from "@/assets/Banner.png.asset.json";
 import logoFooter from "@/assets/logo_footer.asset.json";
 import institutoRealinhar from "@/assets/instituto_realinhar.asset.json";
 import backgroundAsset from "@/assets/background.asset.json";
+import dorLombarAsset from "@/assets/dor_lombar.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -218,17 +219,33 @@ function Problema() {
           </p>
         </motion.div>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {cards.map((c, i) => (
-            <motion.div
-              key={c.title}
-              {...useFade(i * 0.1)}
-              className="rounded-xl border border-brand-border bg-white p-6"
-            >
-              <c.icon className="h-7 w-7 text-gold" />
-              <h3 className="mt-4 font-sans font-semibold text-navy">{c.title}</h3>
-              <p className="mt-2 font-sans text-sm text-brand-muted">{c.desc}</p>
-            </motion.div>
-          ))}
+          {cards.map((c, i) => {
+            const isLombar = i === 0;
+            return (
+              <motion.div
+                key={c.title}
+                {...useFade(i * 0.1)}
+                className="relative overflow-hidden rounded-xl border border-brand-border bg-white p-6"
+              >
+                {isLombar && (
+                  <>
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 -z-20 bg-cover bg-center"
+                      style={{ backgroundImage: `url(${dorLombarAsset.url})` }}
+                    />
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 -z-10 bg-gradient-to-t from-cream/95 via-cream/88 to-cream/80"
+                    />
+                  </>
+                )}
+                <c.icon className="relative h-7 w-7 text-gold" />
+                <h3 className="relative mt-4 font-sans font-semibold text-navy">{c.title}</h3>
+                <p className="relative mt-2 font-sans text-sm text-brand-muted">{c.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
         <motion.div {...useFade(0.2)} className="mx-auto mt-12 max-w-xl text-center">
           <p className="font-sans text-base text-brand-muted">
