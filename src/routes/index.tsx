@@ -635,9 +635,7 @@ function Instituto() {
             </div>
           </motion.div>
           <motion.div {...useFade(0.1)}>
-            <div className="rounded-xl bg-navy-dark/70 p-8 backdrop-blur-sm">
-              <InstitutoContent />
-            </div>
+            <InstitutoContent />
           </motion.div>
         </div>
       </div>
