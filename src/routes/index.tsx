@@ -140,7 +140,7 @@ function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 pt-2 pb-0 md:px-8 lg:pt-4">
+      <div className="relative mx-auto max-w-7xl px-6 pt-1 pb-0 md:px-8 lg:pt-2">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between">
           {/* Text content */}
           <div className="max-w-xl lg:max-w-[55%] lg:pb-8">
