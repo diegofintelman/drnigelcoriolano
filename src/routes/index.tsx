@@ -18,6 +18,10 @@ import institutoRealinhar from "@/assets/instituto_realinhar.asset.json";
 import backgroundAsset from "@/assets/background.asset.json";
 import dorLombarAsset from "@/assets/dor_lombar.png.asset.json";
 import dorPescocoAsset from "@/assets/dor_pescoco.png.asset.json";
+import herniaDiscoAsset from "@/assets/hernia_disco.png.asset.json";
+import tratamentoNaoSustentaAsset from "@/assets/tratamento_nao_sustenta.png.asset.json";
+import dorRepousoAsset from "@/assets/dor_repouso.png.asset.json";
+import dorCronicaAsset from "@/assets/dor_cronica.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
