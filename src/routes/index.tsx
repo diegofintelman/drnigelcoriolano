@@ -307,25 +307,25 @@ function BioContent() {
 function Bio() {
   return (
     <Section id="sobre" bg="white" className="pt-0 pb-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
-        {/* Mobile: imagem no topo, sem quadro, texto sobreposto com gradiente */}
-        <div className="lg:hidden relative -mx-5 md:-mx-8">
-          <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="mx-auto max-w-6xl md:px-8">
+        {/* Mobile: imagem full-bleed no topo, sem quadro, texto sobreposto com gradiente */}
+        <div className="lg:hidden relative">
+          <div className="relative w-full" style={{ aspectRatio: "3/4" }}>
             <img
               src={fotoQuemSouEu.url}
               alt="Dr. Nigel Coriolano na recepção"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-top"
             />
-            {/* Gradient from photo to white, text overlaps lower half */}
+            {/* Gradient from photo to white; text sits on the lower-half seam */}
             <div
               aria-hidden
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.85) 65%, rgba(255,255,255,1) 100%)",
+                background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 42%, rgba(255,255,255,0.78) 58%, rgba(255,255,255,0.95) 72%, rgba(255,255,255,1) 100%)",
               }}
             />
           </div>
-          <div className="relative -mt-48 px-5 md:px-8 pb-8">
+          <div className="relative -mt-[55%] px-5 md:px-8 pb-8">
             <motion.div {...useFade(0.1)}>
               <BioContent />
             </motion.div>
