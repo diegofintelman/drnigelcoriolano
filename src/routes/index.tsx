@@ -333,7 +333,7 @@ function Bio() {
         </div>
 
         {/* Desktop: grid com foto e texto lado a lado */}
-        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12">
+        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12 px-5 md:px-8">
           <motion.div {...useFade()} className="relative">
             <div className="relative overflow-hidden rounded-2xl border border-[rgba(13,43,92,0.1)] aspect-[3/4]">
               <img src={fotoQuemSouEu.url} alt="Dr. Nigel Coriolano na recepção" className="h-full w-full object-cover" />
