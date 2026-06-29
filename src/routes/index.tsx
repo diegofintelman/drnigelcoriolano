@@ -306,7 +306,7 @@ function BioContent() {
 
 function Bio() {
   return (
-    <Section id="sobre" bg="white" className="py-20 md:py-28">
+    <Section id="sobre" bg="white" className="pt-0 pb-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         {/* Mobile: imagem no topo, sem quadro, texto sobreposto com gradiente */}
         <div className="lg:hidden relative -mx-5 md:-mx-8">
