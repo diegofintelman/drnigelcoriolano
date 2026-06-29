@@ -119,7 +119,7 @@ function HeaderLogo() {
 /* ============ HERO ============ */
 function Hero() {
   return (
-    <Section bg="cream" className="relative overflow-hidden">
+    <Section bg="cream" className="relative isolate overflow-hidden">
       {/* Background image com fit-cover */}
       <div
         aria-hidden
@@ -238,7 +238,7 @@ function Problema() {
               <motion.div
                 key={c.title}
                 {...useFade(i * 0.1)}
-                className="relative overflow-hidden rounded-xl border border-brand-border bg-white p-6"
+                className="relative isolate overflow-hidden rounded-xl border border-brand-border bg-white p-6"
               >
                 {bgUrl && (
                   <>
