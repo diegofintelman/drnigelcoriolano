@@ -131,7 +131,7 @@ function Hero() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      {/* Blur brand (gold) behind text column */}
+      {/* Gradient overlay for readability */}
       <div
         aria-hidden
         className="absolute top-0 left-0 h-full w-full lg:w-[62%] -z-10"
@@ -139,19 +139,11 @@ function Hero() {
           background: "linear-gradient(90deg, rgba(248,245,240,0.92) 0%, rgba(248,245,240,0.82) 55%, rgba(248,245,240,0.35) 100%)",
         }}
       />
-      <div
-        aria-hidden
-        className="absolute top-1/4 left-8 h-72 w-72 -translate-y-1/2 rounded-full bg-gold/20 blur-3xl -z-10 lg:left-16 lg:h-96 lg:w-96"
-      />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-5 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
         <div className="relative">
-          {/* Frosted panel behind copy */}
-          <div
-            aria-hidden
-            className="absolute -inset-4 rounded-2xl bg-cream/40 backdrop-blur-md -z-10 md:-inset-6"
-          />
           <HeaderLogo />
+
           <motion.div {...useFade(0.1)} className="mt-2">
             <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-navy-dark">
               CREFITO-17/190962-F · Paulo Afonso, BA
