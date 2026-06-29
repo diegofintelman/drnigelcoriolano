@@ -120,64 +120,122 @@ function HeaderLogo() {
 function Hero() {
   return (
     <Section bg="cream" className="relative isolate overflow-hidden">
-      {/* Background image */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-20"
-        style={{
-          backgroundImage: `url(${backgroundAsset.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
-      {/* Gradient overlay for readability */}
-      <div
-        aria-hidden
-        className="absolute top-0 left-0 h-full w-full -z-10 lg:w-[65%]"
-        style={{
-          background: "linear-gradient(90deg, rgba(248,245,240,0.96) 0%, rgba(248,245,240,0.88) 55%, rgba(248,245,240,0.40) 100%)",
-        }}
-      />
+      {/* MOBILE / TABLET: 4-layer full-screen hero */}
+      <div className="relative min-h-screen overflow-hidden lg:hidden">
+        {/* Layer 1 — Background */}
+        <div className="absolute inset-0">
+          <img
+            src={backgroundAsset.url}
+            alt=""
+            className="h-full w-full object-cover"
+            aria-hidden
+          />
+          <div className="absolute inset-0 bg-foreground/25" aria-hidden />
+        </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 pt-1 pb-0 md:px-8 lg:pt-2">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between">
-          {/* Text content */}
-          <div className="max-w-xl lg:max-w-[55%] lg:pb-8">
-            <HeaderLogo />
+        {/* Layer 2 — Professional photo */}
+        <div className="absolute inset-0 z-[1] flex items-end justify-center overflow-hidden">
+          <img
+            src={fotoHero.url}
+            alt="Dr. Nigel Coriolano, fisioterapeuta"
+            className="h-[98%] w-auto max-w-none object-contain object-bottom"
+          />
+        </div>
 
-            <motion.div {...useFade(0.1)} className="mt-1">
-              <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-navy-dark">
-                CREFITO-17/190962-F · Paulo Afonso, BA
-              </span>
-            </motion.div>
+        {/* Layer 3 — Readability gradient */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-[2] h-[70%] bg-gradient-to-t from-foreground via-foreground/50 to-transparent"
+          aria-hidden
+        />
 
-            <motion.h1 {...useFade(0.2)} className="mt-2 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-              Você já tentou de tudo para essa dor passar.
-              <br />
-              <span className="text-gold">Ela voltou.</span>
-            </motion.h1>
-            <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-brand-text md:text-lg">
-              Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
-            </motion.p>
-            <motion.div {...useFade(0.4)} className="mt-4">
-              <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
-            </motion.div>
-          </div>
+        {/* Layer 4 — Content */}
+        <div className="relative z-10 flex min-h-screen flex-col items-center justify-end px-6 pb-8 text-center">
+          <HeaderLogo />
 
-          {/* Hero image — overlaps background, starts at the section seam */}
-          <div className="relative mt-3 -mx-6 self-end md:-mx-8 lg:absolute lg:bottom-0 lg:right-0 lg:mx-0 lg:mt-0 lg:h-[88%] lg:w-auto lg:max-w-[48%]">
-            <img
-              src={fotoHero.url}
-              alt="Dr. Nigel Coriolano, fisioterapeuta"
-              className="h-auto max-h-[320px] w-full max-w-md object-contain object-right-bottom md:max-h-[480px] md:max-w-lg lg:h-full lg:max-h-none lg:max-w-none lg:w-auto"
-            />
+          <motion.div {...useFade(0.1)} className="mt-1">
+            <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-primary-foreground">
+              CREFITO-17/190962-F · Paulo Afonso, BA
+            </span>
+          </motion.div>
+
+          <motion.h1 {...useFade(0.2)} className="mt-2 font-serif text-4xl leading-tight text-primary-foreground">
+            Você já tentou de tudo para essa dor passar.
+            <br />
+            <span className="text-gold">Ela voltou.</span>
+          </motion.h1>
+
+          <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-primary-foreground">
+            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+          </motion.p>
+
+          <motion.div {...useFade(0.4)} className="mt-4">
+            <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* DESKTOP: existing layered hero */}
+      <div className="hidden lg:block">
+        {/* Background image */}
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-20"
+          style={{
+            backgroundImage: `url(${backgroundAsset.url})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        {/* Gradient overlay for readability */}
+        <div
+          aria-hidden
+          className="absolute top-0 left-0 h-full w-full -z-10"
+          style={{
+            background: "linear-gradient(90deg, rgba(248,245,240,0.96) 0%, rgba(248,245,240,0.88) 55%, rgba(248,245,240,0.40) 100%)",
+          }}
+        />
+
+        <div className="relative mx-auto max-w-7xl px-6 pt-1 pb-0 md:px-8 lg:pt-2">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between">
+            {/* Text content */}
+            <div className="max-w-xl lg:max-w-[55%] lg:pb-8">
+              <HeaderLogo />
+
+              <motion.div {...useFade(0.1)} className="mt-1">
+                <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-navy-dark">
+                  CREFITO-17/190962-F · Paulo Afonso, BA
+                </span>
+              </motion.div>
+
+              <motion.h1 {...useFade(0.2)} className="mt-2 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+                Você já tentou de tudo para essa dor passar.
+                <br />
+                <span className="text-gold">Ela voltou.</span>
+              </motion.h1>
+              <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-brand-text md:text-lg">
+                Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+              </motion.p>
+              <motion.div {...useFade(0.4)} className="mt-4">
+                <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
+              </motion.div>
+            </div>
+
+            {/* Hero image — overlaps background, starts at the section seam */}
+            <div className="relative mt-3 -mx-6 self-end md:-mx-8 lg:absolute lg:bottom-0 lg:right-0 lg:mx-0 lg:mt-0 lg:h-[88%] lg:w-auto lg:max-w-[48%]">
+              <img
+                src={fotoHero.url}
+                alt="Dr. Nigel Coriolano, fisioterapeuta"
+                className="h-auto max-h-[320px] w-full max-w-md object-contain object-right-bottom md:max-h-[480px] md:max-w-lg lg:h-full lg:max-h-none lg:max-w-none lg:w-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
     </Section>
   );
 }
+
 
 /* ============ PROBLEMA ============ */
 function Problema() {
