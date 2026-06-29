@@ -21,6 +21,10 @@
   --font-mono: "Inter", sans-serif;
 }
 
+@utility text-shadow-hero {
+  text-shadow: 0 2px 16px color-mix(in srgb, var(--foreground) 60%, transparent);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -45,3 +49,4 @@
     font-family: var(--font-sans);
   }
 }
+
