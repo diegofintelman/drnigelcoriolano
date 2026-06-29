@@ -119,7 +119,7 @@ function HeaderLogo() {
 /* ============ HERO ============ */
 function Hero() {
   return (
-    <Section bg="cream" className="relative overflow-hidden">
+    <Section bg="cream" className="relative isolate overflow-hidden">
       {/* Background image com fit-cover */}
       <div
         aria-hidden
