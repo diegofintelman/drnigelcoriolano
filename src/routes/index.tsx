@@ -491,18 +491,15 @@ function Depoimentos() {
             <GoogleIcon />
             <span className="font-sans text-xs uppercase tracking-widest text-gold">AVALIAÇÕES NO GOOGLE</span>
           </div>
-          <h2 className="mt-2 text-center font-serif text-3xl text-navy md:text-4xl">O que os pacientes dizem</h2>
-          <p className="mt-3 mb-14 text-center font-sans text-sm text-brand-muted">
-            <span className="text-[#FBBC05]">★★★★★</span>
-            <span>  5.0 · 6 avaliações no Google</span>
-          </p>
+          <h2 className="mt-2 mb-14 text-center font-serif text-3xl text-navy md:text-4xl">O que os pacientes dizem</h2>
         </motion.div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
-          {reviews.map((r, i) => (
-            <motion.div
+      </div>
+      <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div className="flex w-max gap-5 animate-[depoimentos-scroll_40s_linear_infinite] group-hover:[animation-play-state:paused]">
+          {[...reviews, ...reviews].map((r, i) => (
+            <div
               key={i}
-              {...useFade(i * 0.1)}
-              className="flex h-full flex-col rounded-xl border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
+              className="flex h-auto w-[300px] shrink-0 flex-col rounded-xl border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:w-[340px]"
             >
               <div className="mb-3 flex items-center gap-3">
                 <div
@@ -517,21 +514,16 @@ function Depoimentos() {
                 {Array.from({ length: 5 }).map((_, k) => <Star key={k} />)}
               </div>
               <p className="flex-1 font-sans text-sm leading-relaxed text-brand-text">{r.text}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
-          <a
-            href="https://maps.google.com/?q=Instituto+Realinhar+Paulo+Afonso+BA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-sans text-xs text-brand-muted no-underline transition-colors hover:text-gold"
-          >
-            <ExternalLink size={14} className="inline" />
-            <span>Avaliações verificadas no Google · Ver todas as avaliações</span>
-          </a>
-        </div>
       </div>
+      <style>{`
+        @keyframes depoimentos-scroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+      `}</style>
     </Section>
   );
 }
