@@ -266,7 +266,7 @@ function Problema() {
 }
 
 /* ============ BIO ============ */
-function Bio() {
+function BioContent() {
   const creds = [
     { icon: GraduationCap, title: "Palestrante · I Congresso Regional de Fisioterapia (UniRios)", sub: "Hérnia de disco e dor crônica" },
     { icon: Newspaper, title: "Colunista", sub: "Revista Star Bem" },
@@ -274,43 +274,78 @@ function Bio() {
     { icon: Building2, title: "Sócio-Fundador", sub: "Instituto Realinhar · Paulo Afonso, BA" },
   ];
   return (
+    <>
+      <Eyebrow>QUEM VAI CUIDAR DE VOCÊ</Eyebrow>
+      <h2 className="font-serif text-3xl text-navy md:text-4xl">Dr. Nigel Coriolano</h2>
+      <p className="mt-2 font-sans text-xl text-brand-muted">Fisioterapeuta Especialista em Coluna e Controle da Dor</p>
+      <div className="mt-6 mb-8 space-y-4 font-sans text-base leading-relaxed text-brand-text">
+        <p>
+          Sou fisioterapeuta com especialização em coluna vertebral, dor lombar, cervicalgia, hérnia de disco e dor crônica. Minha abordagem é simples: você merece entender o que está acontecendo com o seu corpo e receber um plano de tratamento que faça sentido para a sua vida — não uma receita genérica que todo mundo recebe.
+        </p>
+        <p>
+          Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída definitiva para a dor, sem depender de medicamentos indefinidamente.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {creds.map((c) => (
+          <div key={c.title} className="flex items-start gap-3 rounded-xl bg-cream p-4">
+            <c.icon className="h-5 w-5 shrink-0 text-gold mt-0.5" />
+            <div>
+              <p className="font-sans text-sm font-medium text-navy">{c.title}</p>
+              <p className="font-sans text-xs text-brand-muted mt-0.5">{c.sub}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-8">
+        <PrimaryCTA>Agendar minha avaliação →</PrimaryCTA>
+      </div>
+    </>
+  );
+}
+
+function Bio() {
+  return (
     <Section id="sobre" bg="white" className="py-20 md:py-28">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 md:px-8 lg:grid-cols-[45fr_55fr]">
-        <motion.div {...useFade()} className="relative order-2 lg:order-1">
-          <div className="relative overflow-hidden rounded-2xl border border-[rgba(13,43,92,0.1)] aspect-video lg:aspect-[3/4]">
-            <img src={fotoQuemSouEu.url} alt="Dr. Nigel Coriolano na recepção" className="h-full w-full object-cover" />
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
+        {/* Mobile: imagem no topo, sem quadro, texto sobreposto com gradiente */}
+        <div className="lg:hidden relative -mx-5 md:-mx-8">
+          <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <img
+              src={fotoQuemSouEu.url}
+              alt="Dr. Nigel Coriolano na recepção"
+              className="h-full w-full object-cover"
+            />
+            {/* Gradient from photo to white, text overlaps lower half */}
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.85) 65%, rgba(255,255,255,1) 100%)",
+              }}
+            />
           </div>
-          <div className="absolute bottom-4 left-4 rounded-xl bg-[#060F20] px-4 py-3 shadow-lg">
-            <span className="font-mono text-xs text-gold">CREFITO-17/190962-F</span>
+          <div className="relative -mt-48 px-5 md:px-8 pb-8">
+            <motion.div {...useFade(0.1)}>
+              <BioContent />
+            </motion.div>
           </div>
-        </motion.div>
-        <motion.div {...useFade(0.1)} className="order-1 lg:order-2">
-          <Eyebrow>QUEM VAI CUIDAR DE VOCÊ</Eyebrow>
-          <h2 className="font-serif text-3xl text-navy md:text-4xl">Dr. Nigel Coriolano</h2>
-          <p className="mt-2 font-sans text-xl text-brand-muted">Fisioterapeuta Especialista em Coluna e Controle da Dor</p>
-          <div className="mt-6 mb-8 space-y-4 font-sans text-base leading-relaxed text-brand-text">
-            <p>
-              Sou fisioterapeuta com especialização em coluna vertebral, dor lombar, cervicalgia, hérnia de disco e dor crônica. Minha abordagem é simples: você merece entender o que está acontecendo com o seu corpo e receber um plano de tratamento que faça sentido para a sua vida — não uma receita genérica que todo mundo recebe.
-            </p>
-            <p>
-              Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída definitiva para a dor, sem depender de medicamentos indefinidamente.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {creds.map((c) => (
-              <div key={c.title} className="flex items-start gap-3 rounded-xl bg-cream p-4">
-                <c.icon className="h-5 w-5 shrink-0 text-gold mt-0.5" />
-                <div>
-                  <p className="font-sans text-sm font-medium text-navy">{c.title}</p>
-                  <p className="font-sans text-xs text-brand-muted mt-0.5">{c.sub}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8">
-            <PrimaryCTA>Agendar minha avaliação →</PrimaryCTA>
-          </div>
-        </motion.div>
+        </div>
+
+        {/* Desktop: grid com foto e texto lado a lado */}
+        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12">
+          <motion.div {...useFade()} className="relative">
+            <div className="relative overflow-hidden rounded-2xl border border-[rgba(13,43,92,0.1)] aspect-[3/4]">
+              <img src={fotoQuemSouEu.url} alt="Dr. Nigel Coriolano na recepção" className="h-full w-full object-cover" />
+            </div>
+            <div className="absolute bottom-4 left-4 rounded-xl bg-[#060F20] px-4 py-3 shadow-lg">
+              <span className="font-mono text-xs text-gold">CREFITO-17/190962-F</span>
+            </div>
+          </motion.div>
+          <motion.div {...useFade(0.1)}>
+            <BioContent />
+          </motion.div>
+        </div>
       </div>
     </Section>
   );
