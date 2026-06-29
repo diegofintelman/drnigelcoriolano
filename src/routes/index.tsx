@@ -6,7 +6,7 @@ import {
   GraduationCap, Newspaper, Tv2, Building2,
   ClipboardList, Target, TrendingUp, Info,
   AlertTriangle, Layers, ArrowDownRight, Repeat, Waves,
-  MapPin, Instagram, ChevronDown, MessageCircle,
+  MapPin, Instagram, ChevronDown, MessageCircle, ExternalLink,
 } from "lucide-react";
 import fotoHero from "@/assets/foto_hero.asset.json";
 import fotoQuemSouEu from "@/assets/quem_sou_eu.asset.json";
