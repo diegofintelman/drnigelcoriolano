@@ -140,7 +140,7 @@ function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-5 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-6 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
         <div className="relative">
           <HeaderLogo />
 
@@ -207,7 +207,7 @@ function Problema() {
   ];
   return (
     <Section id="problema" bg="cream" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
         <motion.div {...useFade()} className="text-center">
           <Eyebrow center>VOCÊ SE RECONHECE AQUI?</Eyebrow>
           <h2 className="font-serif text-3xl text-navy md:text-4xl">Essas dores têm nome, têm causa — e têm tratamento.</h2>
@@ -309,7 +309,7 @@ function Bio() {
     <Section id="sobre" bg="white" className="pt-0 pb-20 md:py-28">
       <div className="mx-auto max-w-6xl md:px-8">
         {/* Mobile: imagem full-bleed no topo, sem quadro, texto sobreposto com gradiente */}
-        <div className="lg:hidden relative -mx-5 md:-mx-8">
+        <div className="lg:hidden relative -mx-6 md:-mx-8">
           <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
             <img
               src={fotoQuemSouEu.url}
@@ -325,7 +325,7 @@ function Bio() {
               }}
             />
           </div>
-          <div className="relative -mt-[55%] px-5 md:px-8 pb-8">
+          <div className="relative -mt-[55%] px-6 md:px-8 pb-8">
             <motion.div {...useFade(0.1)}>
               <BioContent />
             </motion.div>
@@ -333,7 +333,7 @@ function Bio() {
         </div>
 
         {/* Desktop: grid com foto e texto lado a lado */}
-        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12 px-5 md:px-8">
+        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12 px-6 md:px-8">
           <motion.div {...useFade()} className="relative">
             <div className="relative overflow-hidden rounded-2xl border border-[rgba(13,43,92,0.1)] aspect-[3/4]">
               <img src={fotoQuemSouEu.url} alt="Dr. Nigel Coriolano na recepção" className="h-full w-full object-cover" />
@@ -365,7 +365,7 @@ function Metodo() {
         className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(circle at 70% 20%, rgba(196,161,69,0.06), transparent 60%)" }}
       />
-      <div className="relative mx-auto max-w-6xl px-5 md:px-8">
+      <div className="relative mx-auto max-w-6xl px-6 md:px-8">
         <motion.div {...useFade()} className="text-center">
           <Eyebrow light center>COMO FUNCIONA</Eyebrow>
           <h2 className="font-serif text-3xl text-white md:text-4xl">
@@ -412,7 +412,7 @@ function Especialidades() {
   ];
   return (
     <Section id="especialidades" bg="cream" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
         <motion.div {...useFade()} className="text-center">
           <Eyebrow center>O QUE EU TRATO</Eyebrow>
           <h2 className="font-serif text-3xl text-navy md:text-4xl">Condições em que sou especialista</h2>
@@ -520,7 +520,7 @@ function Depoimentos() {
   ];
   return (
     <Section id="depoimentos" bg="white" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
         <motion.div {...useFade()} className="text-center">
           <div className="mb-3 flex items-center justify-center gap-2">
             <GoogleIcon />
@@ -598,7 +598,7 @@ function Instituto() {
     <Section id="instituto" bg="navy-dark" className="pt-0 md:pt-0">
       <div className="mx-auto max-w-6xl md:px-8">
         {/* Mobile & Tablet: imagem full-bleed no topo, sem quadro, texto sobreposto com gradiente navy */}
-        <div className="lg:hidden relative -mx-5 md:-mx-8">
+        <div className="lg:hidden relative -mx-6 md:-mx-8">
           <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
             <img
               src={fotoRealinhar.url}
@@ -614,7 +614,7 @@ function Instituto() {
               }}
             />
           </div>
-          <div className="relative -mt-[55%] px-5 md:px-8 pb-12">
+          <div className="relative -mt-[55%] px-6 md:px-8 pb-12">
             <motion.div {...useFade(0.1)}>
               <InstitutoContent />
             </motion.div>
@@ -625,7 +625,7 @@ function Instituto() {
         </div>
 
         {/* Desktop: grid com foto e texto lado a lado, igual a #sobre */}
-        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12 px-5 md:px-8 py-20">
+        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12 px-6 md:px-8 py-20">
           <motion.div {...useFade()} className="relative">
             <div className="relative overflow-hidden rounded-2xl border border-[rgba(13,43,92,0.1)] aspect-[3/4]">
               <img src={fotoRealinhar.url} alt="Dr. Nigel no Instituto Realinhar" className="h-full w-full object-cover" />
@@ -648,7 +648,7 @@ function CtaFinal() {
   const dots = [4, 6, 9, 12, 14, 12, 9, 6, 4];
   return (
     <Section id="agendar" bg="cream" className="py-24 md:py-32">
-      <div className="mx-auto max-w-2xl px-5 text-center md:px-8">
+      <div className="mx-auto max-w-2xl px-6 text-center md:px-8">
         <motion.div {...useFade()} className="mb-6 flex items-end justify-center gap-2">
           {dots.map((s, i) => (
             <span
@@ -707,7 +707,7 @@ function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <Section id="faq" bg="white" className="py-20 md:py-28">
-      <div className="mx-auto max-w-3xl px-5 md:px-8">
+      <div className="mx-auto max-w-3xl px-6 md:px-8">
         <motion.div {...useFade()} className="text-center">
           <Eyebrow center>DÚVIDAS FREQUENTES</Eyebrow>
           <h2 className="font-serif text-3xl text-navy md:text-4xl">Perguntas que todo paciente faz antes de agendar</h2>
@@ -748,7 +748,7 @@ function Faq() {
 function Footer() {
   return (
     <footer className="bg-[#060F20] border-t border-[rgba(196,161,69,0.15)] py-12 md:py-16">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <img src={logoFooter.url} alt="Nigel Coriolano Fisioterapeuta" className="h-20 bg-white rounded-lg p-2" />
