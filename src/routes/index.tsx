@@ -624,34 +624,21 @@ function Instituto() {
           </div>
         </div>
 
-        {/* Desktop: imagem full-bleed como hero, texto sobreposto na base */}
-        <div className="hidden lg:block relative">
-          <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
-            <img
-              src={fotoRealinhar.url}
-              alt="Dr. Nigel no Instituto Realinhar"
-              className="h-full w-full object-cover object-top"
-            />
-            <div
-              aria-hidden
-              className="absolute inset-0"
-              style={{
-                background: "linear-gradient(to bottom, rgba(6,15,32,0) 0%, rgba(6,15,32,0) 35%, rgba(6,15,32,0.85) 55%, rgba(6,15,32,0.98) 75%, rgba(6,15,32,1) 100%)",
-              }}
-            />
-          </div>
-          <div className="relative -mt-[45%] px-5 md:px-8 pb-12">
-            <motion.div {...useFade(0.1)}>
-              <div className="grid grid-cols-2 items-end gap-10">
-                <div className="rounded-xl bg-navy-dark/70 p-6 backdrop-blur-sm">
-                  <InstitutoContent />
-                </div>
-                <div className="flex justify-end">
-                  <img src={institutoRealinhar.url} alt="Logo Instituto Realinhar" className="h-12 bg-white rounded px-3 py-1" />
-                </div>
-              </div>
-            </motion.div>
-          </div>
+        {/* Desktop: grid com foto e texto lado a lado, igual a #sobre */}
+        <div className="hidden lg:grid grid-cols-[45fr_55fr] items-center gap-12 px-5 md:px-8 py-20">
+          <motion.div {...useFade()} className="relative">
+            <div className="relative overflow-hidden rounded-2xl border border-[rgba(13,43,92,0.1)] aspect-[3/4]">
+              <img src={fotoRealinhar.url} alt="Dr. Nigel no Instituto Realinhar" className="h-full w-full object-cover" />
+            </div>
+            <div className="absolute bottom-4 left-4 rounded-xl bg-white px-3 py-2 shadow-lg">
+              <img src={institutoRealinhar.url} alt="Logo Instituto Realinhar" className="h-8" />
+            </div>
+          </motion.div>
+          <motion.div {...useFade(0.1)}>
+            <div className="rounded-xl bg-navy-dark/70 p-8 backdrop-blur-sm">
+              <InstitutoContent />
+            </div>
+          </motion.div>
         </div>
       </div>
     </Section>
