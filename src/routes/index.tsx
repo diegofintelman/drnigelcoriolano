@@ -630,7 +630,7 @@ function Instituto() {
             <img
               src={fotoRealinhar.url}
               alt="Dr. Nigel no Instituto Realinhar"
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-top"
             />
             <div
               aria-hidden
