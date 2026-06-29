@@ -152,7 +152,7 @@ function Hero() {
         <div className="relative z-10 flex min-h-screen flex-col items-center justify-end px-6 pb-8 text-center">
           <HeaderLogo />
 
-          <motion.div {...useFade(0.1)} className="mt-1">
+          <motion.div {...useFade(0.1)} className="mt-1 hidden">
             <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-primary-foreground text-shadow-hero">
               CREFITO-17/190962-F · Paulo Afonso, BA
             </span>
