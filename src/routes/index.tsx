@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import {
-  Check, Activity, Zap, AlertCircle, RefreshCw, Clock, Brain,
+  Activity, Zap, AlertCircle, RefreshCw, Clock, Brain,
   GraduationCap, Newspaper, Tv2, Building2,
   ClipboardList, Target, TrendingUp, Info,
   AlertTriangle, Layers, ArrowDownRight, Repeat, Waves,
@@ -90,7 +90,7 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 font-sans font-semibold text-white transition hover:brightness-110 ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-light px-7 py-3.5 font-sans font-semibold text-navy-dark shadow-md shadow-gold/20 transition hover:shadow-lg hover:shadow-gold/30 hover:brightness-105 ${className}`}
     >
       <WhatsAppIcon className="h-5 w-5" />
       {children}
@@ -101,12 +101,12 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
 /* ============ HEADER LOGO ============ */
 function HeaderLogo() {
   return (
-    <div className="w-full">
-      <a href="/" className="inline-block">
+    <div className="w-full leading-none">
+      <a href="/" className="block leading-none">
         <img
           src={bannerAsset.url}
           alt="Dr. Nigel Coriolano — Fisioterapeuta"
-          className="h-auto w-[290px] sm:w-[300px] md:w-[310px]"
+          className="h-auto max-h-[100px] w-[290px] object-contain object-left sm:w-[300px] md:max-h-[120px] md:w-[310px]"
         />
       </a>
     </div>
@@ -120,7 +120,7 @@ function HeaderLogo() {
 function Hero() {
   return (
     <Section bg="cream" className="relative isolate overflow-hidden">
-      {/* Background image com fit-cover */}
+      {/* Background image */}
       <div
         aria-hidden
         className="absolute inset-0 -z-20"
@@ -134,62 +134,46 @@ function Hero() {
       {/* Gradient overlay for readability */}
       <div
         aria-hidden
-        className="absolute top-0 left-0 h-full w-full lg:w-[62%] -z-10"
+        className="absolute top-0 left-0 h-full w-full -z-10 lg:w-[65%]"
         style={{
-          background: "linear-gradient(90deg, rgba(248,245,240,0.92) 0%, rgba(248,245,240,0.82) 55%, rgba(248,245,240,0.35) 100%)",
+          background: "linear-gradient(90deg, rgba(248,245,240,0.96) 0%, rgba(248,245,240,0.88) 55%, rgba(248,245,240,0.40) 100%)",
         }}
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-6 pb-12 pt-3 md:px-8 lg:grid-cols-[55fr_45fr] lg:gap-14">
-        <div className="relative">
-          <HeaderLogo />
+      <div className="relative mx-auto max-w-7xl px-6 pt-1 pb-0 md:px-8 lg:pt-2">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between">
+          {/* Text content */}
+          <div className="max-w-xl lg:max-w-[55%] lg:pb-8">
+            <HeaderLogo />
 
-          <motion.div {...useFade(0.1)} className="mt-2">
-            <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-navy-dark">
-              CREFITO-17/190962-F · Paulo Afonso, BA
-            </span>
-          </motion.div>
+            <motion.div {...useFade(0.1)} className="mt-1">
+              <span className="inline-flex rounded-full border border-gold/60 bg-gold/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-widest text-navy-dark">
+                CREFITO-17/190962-F · Paulo Afonso, BA
+              </span>
+            </motion.div>
 
-          <motion.h1 {...useFade(0.2)} className="mt-4 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-6xl">
-            Você já tentou de tudo para essa dor passar.
-            <br />
-            <span className="text-gold">Ela voltou.</span>
-          </motion.h1>
-          <motion.p {...useFade(0.3)} className="mt-4 max-w-lg font-sans text-base text-brand-text md:text-lg">
-            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
-          </motion.p>
-          <motion.div {...useFade(0.4)} className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
-            <a
-              href="#especialidades"
-              className="inline-flex items-center justify-center rounded-full border border-navy/20 bg-transparent px-7 py-3.5 font-sans font-medium text-navy transition hover:bg-navy/5"
-            >
-              Ver especialidades ↓
-            </a>
-          </motion.div>
-          <motion.ul {...useFade(0.5)} className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-            {[
-              "Especialista em coluna e dor crônica",
-              "Tratamento sem medicamentos",
-              "Avaliação individualizada",
-            ].map((t) => (
-              <li key={t} className="flex items-center gap-2 font-mono text-xs text-brand-muted">
-                <Check className="h-4 w-4 text-gold" /> {t}
-              </li>
-            ))}
-          </motion.ul>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.3 }}
-          className="relative lg:-translate-y-6"
-        >
-          <div className="overflow-hidden rounded-2xl border border-gold/20 bg-gradient-to-br from-[#1A3D73] to-[#0D2B5C] aspect-[4/3] lg:aspect-[3/4]">
-            <img src={fotoHero.url} alt="Dr. Nigel Coriolano, fisioterapeuta" className="h-full w-full object-cover object-top" />
+            <motion.h1 {...useFade(0.2)} className="mt-2 font-serif text-4xl leading-tight text-navy-dark md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+              Você já tentou de tudo para essa dor passar.
+              <br />
+              <span className="text-gold">Ela voltou.</span>
+            </motion.h1>
+            <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-brand-text md:text-lg">
+              Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+            </motion.p>
+            <motion.div {...useFade(0.4)} className="mt-4">
+              <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
+            </motion.div>
           </div>
-        </motion.div>
+
+          {/* Hero image — overlaps background, starts at the section seam */}
+          <div className="relative mt-3 -mx-6 self-end md:-mx-8 lg:absolute lg:bottom-0 lg:right-0 lg:mx-0 lg:mt-0 lg:h-[88%] lg:w-auto lg:max-w-[48%]">
+            <img
+              src={fotoHero.url}
+              alt="Dr. Nigel Coriolano, fisioterapeuta"
+              className="h-auto max-h-[320px] w-full max-w-md object-contain object-right-bottom md:max-h-[480px] md:max-w-lg lg:h-full lg:max-h-none lg:max-w-none lg:w-auto"
+            />
+          </div>
+        </div>
       </div>
     </Section>
   );
