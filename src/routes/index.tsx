@@ -564,42 +564,95 @@ function Depoimentos() {
 }
 
 /* ============ INSTITUTO ============ */
+function InstitutoContent() {
+  return (
+    <>
+      <Eyebrow light>ONDE OS ATENDIMENTOS ACONTECEM</Eyebrow>
+      <h2 className="font-serif text-2xl text-white md:text-3xl">Instituto Realinhar</h2>
+      <p className="mt-2 mb-4 font-sans text-sm text-gold">Instituto de Terapia e Controle da Dor</p>
+      <p className="font-sans text-sm leading-relaxed text-slate-300 mb-6">
+        Os atendimentos do Dr. Nigel acontecem no Instituto Realinhar, uma clínica especializada projetada para o tratamento e controle da dor. Um espaço criado para que você se sinta cuidado desde o momento em que entra.
+      </p>
+      <div className="flex items-start gap-3">
+        <MapPin className="h-5 w-5 shrink-0 text-gold mt-0.5" />
+        <p className="font-sans text-sm text-slate-300">
+          Av. José Hemetério de Carvalho, 145
+          <br />
+          Centro · Paulo Afonso, BA
+        </p>
+      </div>
+      <a
+        href={MAPS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 inline-block font-mono text-xs text-gold underline-offset-4 hover:underline"
+      >
+        Ver no Google Maps →
+      </a>
+    </>
+  );
+}
+
 function Instituto() {
   return (
-    <Section id="instituto" bg="navy" className="py-16 md:py-20">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-5 md:px-8 lg:grid-cols-2">
-        <motion.div {...useFade()} className="max-w-md">
-          <Eyebrow>ONDE OS ATENDIMENTOS ACONTECEM</Eyebrow>
-          <h2 className="font-serif text-2xl text-white md:text-3xl">Instituto Realinhar</h2>
-          <p className="mt-2 mb-4 font-sans text-sm text-gold">Instituto de Terapia e Controle da Dor</p>
-          <p className="font-sans text-sm leading-relaxed text-slate-300 mb-6">
-            Os atendimentos do Dr. Nigel acontecem no Instituto Realinhar, uma clínica especializada projetada para o tratamento e controle da dor. Um espaço criado para que você se sinta cuidado desde o momento em que entra.
-          </p>
-          <div className="flex items-start gap-3 mt-4">
-            <MapPin className="h-5 w-5 shrink-0 text-gold mt-0.5" />
-            <p className="font-sans text-sm text-slate-300">
-              Av. José Hemetério de Carvalho, 145
-              <br />
-              Centro · Paulo Afonso, BA
-            </p>
+    <Section id="instituto" bg="navy-dark" className="pt-0 md:pt-0">
+      <div className="mx-auto max-w-6xl md:px-8">
+        {/* Mobile & Tablet: imagem full-bleed no topo, sem quadro, texto sobreposto com gradiente navy */}
+        <div className="lg:hidden relative -mx-5 md:-mx-8">
+          <div className="relative w-full" style={{ aspectRatio: "4/5" }}>
+            <img
+              src={fotoRealinhar.url}
+              alt="Dr. Nigel no Instituto Realinhar"
+              className="h-full w-full object-cover object-center"
+            />
+            {/* Gradient from photo to navy-dark so text sits on the lower-half seam */}
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to bottom, rgba(6,15,32,0) 0%, rgba(6,15,32,0) 42%, rgba(6,15,32,0.78) 58%, rgba(6,15,32,0.95) 72%, rgba(6,15,32,1) 100%)",
+              }}
+            />
           </div>
-          <a
-            href={MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-3 inline-block font-mono text-xs text-gold underline-offset-4 hover:underline"
-          >
-            Ver no Google Maps →
-          </a>
-        </motion.div>
-        <motion.div {...useFade(0.1)}>
-          <div className="overflow-hidden rounded-2xl border border-[rgba(196,161,69,0.2)] bg-[#060F20] aspect-video md:aspect-[4/3]">
-            <img src={fotoRealinhar.url} alt="Dr. Nigel no Instituto Realinhar" className="h-full w-full object-cover" />
+          <div className="relative -mt-[55%] px-5 md:px-8 pb-12">
+            <motion.div {...useFade(0.1)}>
+              <InstitutoContent />
+            </motion.div>
+            <div className="mt-5 flex items-center justify-center gap-3 opacity-90">
+              <img src={institutoRealinhar.url} alt="Logo Instituto Realinhar" className="h-10 bg-white rounded px-2 py-1" />
+            </div>
           </div>
-          <div className="mt-3 flex items-center justify-center gap-3 opacity-80">
-            <img src={institutoRealinhar.url} alt="Logo Instituto Realinhar" className="h-10 bg-white rounded px-2 py-1" />
+        </div>
+
+        {/* Desktop: imagem full-bleed como hero, texto sobreposto na base */}
+        <div className="hidden lg:block relative">
+          <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+            <img
+              src={fotoRealinhar.url}
+              alt="Dr. Nigel no Instituto Realinhar"
+              className="h-full w-full object-cover object-center"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to bottom, rgba(6,15,32,0) 0%, rgba(6,15,32,0) 45%, rgba(6,15,32,0.75) 65%, rgba(6,15,32,0.95) 80%, rgba(6,15,32,1) 100%)",
+              }}
+            />
           </div>
-        </motion.div>
+          <div className="relative -mt-[45%] px-5 md:px-8 pb-12">
+            <motion.div {...useFade(0.1)}>
+              <div className="grid grid-cols-2 items-end gap-10">
+                <div>
+                  <InstitutoContent />
+                </div>
+                <div className="flex justify-end">
+                  <img src={institutoRealinhar.url} alt="Logo Instituto Realinhar" className="h-12 bg-white rounded px-3 py-1" />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </Section>
   );
