@@ -16,6 +16,7 @@ import bannerAsset from "@/assets/Banner.png.asset.json";
 import logoFooter from "@/assets/logo_footer.asset.json";
 import institutoRealinhar from "@/assets/instituto_realinhar.asset.json";
 import backgroundAsset from "@/assets/background.asset.json";
+import dorLombarAsset from "@/assets/dor_lombar.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
