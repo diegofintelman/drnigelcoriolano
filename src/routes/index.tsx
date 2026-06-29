@@ -90,9 +90,9 @@ function PrimaryCTA({ children, className = "" }: { children: React.ReactNode; c
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-light px-7 py-3.5 font-sans font-semibold text-navy-dark shadow-md shadow-gold/20 transition hover:shadow-lg hover:shadow-gold/30 hover:brightness-105 ${className}`}
+      className={`inline-flex items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-gold to-gold-light px-7 py-3.5 font-sans font-semibold text-navy-dark shadow-md shadow-gold/20 transition hover:shadow-lg hover:shadow-gold/30 hover:brightness-105 ${className}`}
     >
-      <WhatsAppIcon className="h-5 w-5" />
+      <WhatsAppIcon className="h-6 w-6" />
       {children}
     </a>
   );
@@ -169,7 +169,7 @@ function Hero() {
           </motion.p>
 
           <motion.div {...useFade(0.4)} className="mt-4">
-            <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
+            <PrimaryCTA>Quero agendar minha avaliação</PrimaryCTA>
           </motion.div>
         </div>
       </div>
