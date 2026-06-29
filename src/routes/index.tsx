@@ -462,44 +462,75 @@ function Especialidades() {
 
 /* ============ DEPOIMENTOS ============ */
 function Depoimentos() {
-  const items = [
-    { quote: "Depois de anos com dor lombar e vários tratamentos que não funcionaram, finalmente encontrei alguém que olhou para o meu caso de verdade.", name: "[Nome do Paciente]", sub: "Paulo Afonso, BA · Dor lombar crônica" },
-    { quote: "Fui diagnosticada com hérnia de disco e estava com medo de cirurgia. O Dr. Nigel me explicou tudo, montou um plano e hoje estou sem dor.", name: "[Nome do Paciente]", sub: "Região de Paulo Afonso · Hérnia de disco" },
-    { quote: "O formigamento no braço me impedia de trabalhar. Em menos de 2 meses de tratamento, recuperei a função. Atendimento impecável.", name: "[Nome do Paciente]", sub: "Paulo Afonso, BA · Cervicobraquialgia" },
+  const GoogleIcon = () => (
+    <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+    </svg>
+  );
+  const Star = () => (
+    <svg viewBox="0 0 20 20" fill="#FBBC05" width="16" height="16" aria-hidden="true">
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+    </svg>
+  );
+  const reviews = [
+    { color: "#E67535", initial: "M", name: "Mara Voluzia", text: "Foi muito boa, estava sem poder andar direito com dores no joelho, já na terceira sessão de fisioterapia não sentia mais dores. Profissional atencioso, com empatia." },
+    { color: "#1A8763", initial: "L", name: "Luzia Santos", text: "Fui paciente dele durante um bom tempo, só tenho a agradecer por todo o cuidado e responsabilidade. Um profissional atencioso e capacitado, indico de olhos fechados, virou um grande amigo da família!" },
+    { color: "#188038", initial: "M", name: "Marcia Mothe", text: "Foi muito boa, diferente e específica, já que cada paciente tem sua necessidade particular. O profissional é atencioso e sempre atualiza seus conhecimentos." },
+    { color: "#9334E6", initial: "M", name: "Milena Henriques", text: "Excelente profissional, responsável, humano e comprometido. Sempre respeitando as condições do paciente e inserindo a família na terapia. Super recomendo!" },
+    { color: "#34A853", initial: "R", name: "Rayd Silva", text: "Dr. Nigel muito competente no seu profissionalismo e atendimento, dando qualidade de vida aos seus pacientes, confiança e segurança. Tratamento sem cirurgia e sem remédios. Profissional de caráter honesto e comprometido." },
+    { color: "#1A73E8", initial: "R", name: "Rute Reis", text: "Excelente profissional! Aquele que quer ver resultados. Muito atencioso e preocupado com o bem estar do paciente. Estou na sexta sessão de fisioterapia e já me sinto muito melhor de dores crônicas que sofria há bastante tempo. Super recomendo." },
   ];
   return (
     <Section id="depoimentos" bg="white" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <motion.div {...useFade()} className="text-center">
-          <Eyebrow center>RESULTADOS REAIS</Eyebrow>
-          <h2 className="font-serif text-3xl text-navy md:text-4xl">O que os pacientes dizem</h2>
-          <p className="mx-auto mt-4 mb-14 max-w-2xl font-sans text-lg text-brand-muted">
-            Depoimentos de pessoas que buscaram tratamento especializado e encontraram um caminho consistente para sair da dor.
+          <div className="mb-3 flex items-center justify-center gap-2">
+            <GoogleIcon />
+            <span className="font-sans text-xs uppercase tracking-widest text-gold">AVALIAÇÕES NO GOOGLE</span>
+          </div>
+          <h2 className="mt-2 text-center font-serif text-3xl text-navy md:text-4xl">O que os pacientes dizem</h2>
+          <p className="mt-3 mb-14 text-center font-sans text-sm text-brand-muted">
+            <span className="text-[#FBBC05]">★★★★★</span>
+            <span>  5.0 · 6 avaliações no Google</span>
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {items.map((t, i) => (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+          {reviews.map((r, i) => (
             <motion.div
               key={i}
               {...useFade(i * 0.1)}
-              className="rounded-xl border border-brand-border bg-cream p-7 transition duration-300 hover:border-[rgba(196,161,69,0.5)] hover:shadow-md"
+              className="flex h-full flex-col rounded-xl border border-[rgba(0,0,0,0.08)] bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md"
             >
-              <div className="font-serif text-5xl text-[rgba(196,161,69,0.3)] leading-none mb-2">"</div>
-              <p className="font-sans text-sm italic leading-relaxed text-brand-text">{t.quote}</p>
-              <hr className="my-5 border-brand-border" />
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-[rgba(13,43,92,0.1)]" />
-                <div>
-                  <p className="font-sans text-sm font-semibold text-navy">{t.name}</p>
-                  <p className="font-sans text-xs text-brand-muted">{t.sub}</p>
+              <div className="mb-3 flex items-center gap-3">
+                <div
+                  className="flex h-10 w-10 items-center justify-center rounded-full font-sans text-sm font-semibold text-white"
+                  style={{ backgroundColor: r.color }}
+                >
+                  {r.initial}
                 </div>
+                <p className="font-sans text-[14px] font-semibold text-navy">{r.name}</p>
               </div>
+              <div className="mb-3 flex gap-0.5">
+                {Array.from({ length: 5 }).map((_, k) => <Star key={k} />)}
+              </div>
+              <p className="flex-1 font-sans text-sm leading-relaxed text-brand-text">{r.text}</p>
             </motion.div>
           ))}
         </div>
-        <p className="mt-8 text-center font-mono text-xs text-brand-muted">
-          Depoimentos com autorização dos pacientes. Resultados individuais podem variar.
-        </p>
+        <div className="mt-10 text-center">
+          <a
+            href="https://maps.google.com/?q=Instituto+Realinhar+Paulo+Afonso+BA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-sans text-xs text-brand-muted no-underline transition-colors hover:text-gold"
+          >
+            <ExternalLink size={14} className="inline" />
+            <span>Avaliações verificadas no Google · Ver todas as avaliações</span>
+          </a>
+        </div>
       </div>
     </Section>
   );
