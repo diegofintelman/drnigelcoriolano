@@ -636,7 +636,7 @@ function Instituto() {
               aria-hidden
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to bottom, rgba(6,15,32,0) 0%, rgba(6,15,32,0) 45%, rgba(6,15,32,0.75) 65%, rgba(6,15,32,0.95) 80%, rgba(6,15,32,1) 100%)",
+                background: "linear-gradient(to bottom, rgba(6,15,32,0) 0%, rgba(6,15,32,0) 35%, rgba(6,15,32,0.85) 55%, rgba(6,15,32,0.98) 75%, rgba(6,15,32,1) 100%)",
               }}
             />
           </div>
