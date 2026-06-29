@@ -385,18 +385,73 @@ function Especialidades() {
             Cada condição abaixo tem protocolo específico. Não trato tudo de forma igual.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3" style={{ perspective: "1400px" }}>
           {items.map((c, i) => (
             <motion.div
               key={c.title}
               {...useFade(i * 0.1)}
-              className="rounded-xl border border-brand-border bg-white p-7 transition duration-300 hover:border-[rgba(196,161,69,0.5)] hover:shadow-md"
+              whileHover={{ rotateX: -6, rotateY: 8, translateY: -6, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 200, damping: 18 }}
+              className="group relative isolate overflow-hidden rounded-2xl p-7"
+              style={{
+                transformStyle: "preserve-3d",
+                background:
+                  "linear-gradient(145deg, rgba(255,255,255,0.85) 0%, rgba(247,244,238,0.65) 45%, rgba(13,43,92,0.18) 100%)",
+                boxShadow:
+                  "inset 1px 1px 0 rgba(255,255,255,0.9), inset -1px -1px 0 rgba(13,43,92,0.25), inset 0 0 28px rgba(196,161,69,0.18), 0 18px 40px -18px rgba(13,43,92,0.45), 0 8px 18px -10px rgba(196,161,69,0.35)",
+                border: "1px solid rgba(255,255,255,0.6)",
+                backdropFilter: "blur(6px)",
+              }}
             >
-              <div className="inline-flex rounded-lg bg-[rgba(196,161,69,0.1)] p-2">
-                <c.icon className="h-5 w-5 text-gold" />
+              {/* Crystal facet — top-left light bleed */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-px -z-10 rounded-2xl opacity-90"
+                style={{
+                  background:
+                    "radial-gradient(120% 80% at 10% 0%, rgba(232,200,106,0.55) 0%, rgba(232,200,106,0) 45%), radial-gradient(110% 90% at 100% 100%, rgba(13,43,92,0.35) 0%, rgba(13,43,92,0) 50%)",
+                }}
+              />
+              {/* Specular highlight streak */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-70 mix-blend-screen"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 35%, rgba(255,255,255,0) 65%, rgba(255,255,255,0.25) 100%)",
+                }}
+              />
+              {/* Glossy top edge */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-3 top-0 h-px rounded-full"
+                style={{ background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.95), transparent)" }}
+              />
+
+              <div
+                className="relative inline-flex rounded-xl p-2.5"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #E8C86A 0%, #C4A145 50%, #9E8235 100%)",
+                  boxShadow:
+                    "inset 1px 1px 0 rgba(255,255,255,0.7), inset -1px -1px 0 rgba(0,0,0,0.25), 0 8px 16px -6px rgba(196,161,69,0.55)",
+                  transform: "translateZ(30px)",
+                }}
+              >
+                <c.icon className="h-5 w-5 text-navy-dark" strokeWidth={2.25} />
               </div>
-              <h3 className="mt-4 font-serif text-lg text-navy">{c.title}</h3>
-              <p className="mt-2 font-sans text-sm text-brand-muted">{c.desc}</p>
+              <h3
+                className="relative mt-5 font-serif text-lg text-navy"
+                style={{ transform: "translateZ(20px)", textShadow: "0 1px 0 rgba(255,255,255,0.6)" }}
+              >
+                {c.title}
+              </h3>
+              <p
+                className="relative mt-2 font-sans text-sm text-brand-muted"
+                style={{ transform: "translateZ(10px)" }}
+              >
+                {c.desc}
+              </p>
             </motion.div>
           ))}
         </div>
