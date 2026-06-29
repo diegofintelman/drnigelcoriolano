@@ -231,12 +231,12 @@ function Problema() {
                   <>
                     <div
                       aria-hidden
-                      className="absolute inset-0 -z-20 bg-cover bg-center opacity-40"
+                      className="absolute inset-0 -z-20 bg-cover bg-center opacity-25"
                       style={{ backgroundImage: `url(${dorLombarAsset.url})` }}
                     />
                     <div
                       aria-hidden
-                      className="absolute inset-0 -z-10 bg-gradient-to-t from-cream/80 via-cream/60 to-cream/40"
+                      className="absolute inset-0 -z-10 bg-gradient-to-t from-cream/70 via-cream/45 to-cream/20"
                     />
                   </>
                 )}
