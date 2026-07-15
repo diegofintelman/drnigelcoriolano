@@ -165,7 +165,7 @@ function Hero() {
           </motion.h1>
 
           <motion.p {...useFade(0.3)} className="text-shadow-hero mt-2 max-w-lg font-sans text-base text-primary-foreground">
-            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+            Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado, sem depender de medicamentos.
           </motion.p>
 
           <motion.div {...useFade(0.4)} className="mt-4">
@@ -214,7 +214,7 @@ function Hero() {
                 <span className="text-gold">Ela voltou.</span>
               </motion.h1>
               <motion.p {...useFade(0.3)} className="mt-2 max-w-lg font-sans text-base text-brand-text md:text-lg">
-                Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado — sem depender de medicamentos.
+                Sou o Dr. Nigel Coriolano, fisioterapeuta especialista em coluna e controle da dor. Aqui você recebe avaliação criteriosa, plano personalizado e acompanhamento até o resultado, sem depender de medicamentos.
               </motion.p>
               <motion.div {...useFade(0.4)} className="mt-4">
                 <PrimaryCTA>Quero agendar minha avaliação →</PrimaryCTA>
@@ -242,17 +242,17 @@ function Problema() {
   const cards = [
     { icon: Activity, title: "Dor lombar ao levantar", desc: "Dificuldade de sair da cama ou levantar do chão pela manhã sem sentir travamento ou dor forte nas costas." },
     { icon: Zap, title: "Dor no pescoço com irradiação", desc: "Dor cervical que desce para os ombros, braços ou mãos, às vezes com formigamento ou dormência." },
-    { icon: AlertCircle, title: "Hérnia de disco diagnosticada", desc: "Você tem o diagnóstico na mão, mas ninguém explicou direito o que fazer — e tem medo do que pode acontecer." },
+    { icon: AlertCircle, title: "Hérnia de disco diagnosticada", desc: "Você tem o diagnóstico na mão, mas ninguém explicou direito o que fazer, e tem medo do que pode acontecer." },
     { icon: RefreshCw, title: "Tratamentos que não sustentam", desc: "Melhora por algumas semanas, mas a dor volta sempre que você volta à rotina normal." },
-    { icon: Clock, title: "Dor que não passa com repouso", desc: "Mesmo descansando o fim de semana inteiro, a dor persiste — ou piora ao ficar parado por muito tempo." },
-    { icon: Brain, title: "Dor crônica sem explicação clara", desc: "Exames que dizem 'tudo normal', mas você sente que algo está errado. A dor é verdadeira — e pode ser tratada." },
+    { icon: Clock, title: "Dor que não passa com repouso", desc: "Mesmo descansando o fim de semana inteiro, a dor persiste, ou piora ao ficar parado por muito tempo." },
+    { icon: Brain, title: "Dor crônica sem explicação clara", desc: "Exames que dizem 'tudo normal', mas você sente que algo está errado. A dor é verdadeira, e pode ser tratada." },
   ];
   return (
     <Section id="problema" bg="cream" className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6 md:px-8">
         <motion.div {...useFade()} className="text-center">
           <Eyebrow center>VOCÊ SE RECONHECE AQUI?</Eyebrow>
-          <h2 className="font-serif text-3xl text-navy md:text-4xl">Essas dores têm nome, têm causa — e têm tratamento.</h2>
+          <h2 className="font-serif text-3xl text-navy md:text-4xl">Essas dores têm nome, têm causa, e têm tratamento.</h2>
           <p className="mx-auto mt-4 mb-14 max-w-2xl font-sans text-lg text-brand-muted">
             Antes de desistir de melhorar, veja se o seu caso é um destes:
           </p>
@@ -296,7 +296,7 @@ function Problema() {
         </div>
         <motion.div {...useFade(0.2)} className="mx-auto mt-12 max-w-xl text-center">
           <p className="font-sans text-base text-brand-muted">
-            Cada uma dessas situações tem causa identificável. O problema é que a maioria dos tratamentos genéricos não olha para o seu caso — apenas para o sintoma.
+            Cada uma dessas situações tem causa identificável. O problema é que a maioria dos tratamentos genéricos não olha para o seu caso, apenas para o sintoma.
           </p>
           <a href="#metodo" className="mt-6 inline-block font-sans text-sm font-medium text-gold hover:text-gold-muted">
             Entenda como funciona o tratamento →
@@ -322,7 +322,7 @@ function BioContent() {
       <p className="mt-2 font-sans text-xl text-brand-muted">Fisioterapeuta Especialista em Coluna e Controle da Dor</p>
       <div className="mt-6 mb-8 space-y-4 font-sans text-base leading-relaxed text-brand-text">
         <p>
-          Sou fisioterapeuta com especialização em coluna vertebral, dor lombar, cervicalgia, hérnia de disco e dor crônica. Minha abordagem é simples: você merece entender o que está acontecendo com o seu corpo e receber um plano de tratamento que faça sentido para a sua vida — não uma receita genérica que todo mundo recebe.
+          Sou fisioterapeuta com especialização em coluna vertebral, dor lombar, cervicalgia, hérnia de disco e dor crônica. Minha abordagem é simples: você merece entender o que está acontecendo com o seu corpo e receber um plano de tratamento que faça sentido para a sua vida, não uma receita genérica que todo mundo recebe.
         </p>
         <p>
           Sou sócio-fundador do Instituto Realinhar, em Paulo Afonso-BA, onde atendo de forma individualizada pacientes que buscam uma saída definitiva para a dor, sem depender de medicamentos indefinidamente.
@@ -397,7 +397,7 @@ function Bio() {
 function Metodo() {
   const steps = [
     { n: "01", icon: ClipboardList, title: "Avaliação individualizada", desc: "Não começo pelo protocolo. Começo pela sua história. Exames, hábitos, histórico de dor e limitações reais da sua rotina." },
-    { n: "02", icon: Target, title: "Plano de tratamento personalizado", desc: "Com base na avaliação, montamos juntos um plano concreto — com frequência, técnicas e objetivos claros. Sem promessas que não posso cumprir." },
+    { n: "02", icon: Target, title: "Plano de tratamento personalizado", desc: "Com base na avaliação, montamos juntos um plano concreto, com frequência, técnicas e objetivos claros. Sem promessas que não posso cumprir." },
     { n: "03", icon: TrendingUp, title: "Acompanhamento até o resultado", desc: "Monitoro a sua evolução a cada sessão. Se precisar ajustar o plano, ajustamos. O objetivo é resultado, não manutenção indefinida." },
   ];
   return (
@@ -416,7 +416,7 @@ function Metodo() {
             não para o exame.
           </h2>
           <p className="mx-auto mt-4 mb-16 max-w-xl font-sans text-base text-slate-300">
-            A maioria das pessoas com dor crônica já fez múltiplos tratamentos. O que falta não é mais tentativa — é um processo estruturado, individualizado e com acompanhamento próximo.
+            A maioria das pessoas com dor crônica já fez múltiplos tratamentos. O que falta não é mais tentativa; é um processo estruturado, individualizado e com acompanhamento próximo.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -433,7 +433,7 @@ function Metodo() {
           <span className="inline-flex items-center gap-2 rounded-full border border-[rgba(196,161,69,0.3)] bg-[rgba(196,161,69,0.06)] px-6 py-3">
             <Info className="h-4 w-4 text-gold" />
             <span className="font-mono text-xs text-slate-300">
-              Tratamentos sérios não prometem resultado em uma sessão. Se você quer solução mágica, esse não é o lugar certo — e isso é um diferencial.
+              Tratamentos sérios não prometem resultado em uma sessão. Se você quer solução mágica, esse não é o lugar certo, e isso é um diferencial.
             </span>
           </span>
         </motion.div>
@@ -445,10 +445,10 @@ function Metodo() {
 /* ============ ESPECIALIDADES ============ */
 function Especialidades() {
   const items = [
-    { icon: AlertTriangle, title: "Dor Lombar e Lombalgia", desc: "Tratamento da dor nas costas aguda ou crônica, com foco na causa do problema — não só no alívio momentâneo." },
+    { icon: AlertTriangle, title: "Dor Lombar e Lombalgia", desc: "Tratamento da dor nas costas aguda ou crônica, com foco na causa do problema, não só no alívio momentâneo." },
     { icon: Layers, title: "Hérnia de Disco", desc: "Abordagem conservadora e eficaz para hérnia lombar e cervical, sem cirurgia como primeira opção." },
-    { icon: ArrowDownRight, title: "Cervicalgia e Cervicobraquialgia", desc: "Dor no pescoço que irradia para braços e mãos — com ou sem formigamento. Causa e tratamento específicos." },
-    { icon: Repeat, title: "Dor Crônica", desc: "Dor que persiste por mais de 3 meses merece uma abordagem diferente. Nem toda dor crônica aparece no exame — mas todas têm tratamento." },
+    { icon: ArrowDownRight, title: "Cervicalgia e Cervicobraquialgia", desc: "Dor no pescoço que irradia para braços e mãos, com ou sem formigamento. Causa e tratamento específicos." },
+    { icon: Repeat, title: "Dor Crônica", desc: "Dor que persiste por mais de 3 meses merece uma abordagem diferente. Nem toda dor crônica aparece no exame, mas todas têm tratamento." },
     { icon: Activity, title: "Lesões e Reabilitação", desc: "Retorno à vida funcional após lesões musculoesqueléticas, com protocolo baseado no seu nível de atividade." },
     { icon: Waves, title: "Pilates Clínico Terapêutico", desc: "Fortalecimento e controle motor para pacientes em reabilitação, disponível no Instituto Realinhar." },
   ];
@@ -708,7 +708,7 @@ function CtaFinal() {
             da dor de vez?
           </h2>
           <p className="mx-auto mt-6 mb-10 max-w-lg font-sans text-lg text-brand-muted">
-            Agende sua avaliação de coluna e dor. Uma conversa, uma avaliação completa e um plano feito para você — não para uma planilha de protocolo.
+            Agende sua avaliação de coluna e dor. Uma conversa, uma avaliação completa e um plano feito para você, não para uma planilha de protocolo.
           </p>
         </motion.div>
         <motion.div {...useFade(0.2)} className="flex flex-col items-center gap-4">
@@ -743,7 +743,7 @@ function Faq() {
     { q: "Quantas sessões vou precisar?", a: "Depende da sua condição e evolução. Na avaliação inicial, faço uma estimativa realista baseada no seu histórico e no que observo. Não trabalho com pacotes fechados por princípio." },
     { q: "É possível tratar sem cirurgia?", a: "Na grande maioria dos casos de hérnia de disco, dor lombar e cervical, o tratamento conservador (fisioterapia) é suficiente e eficaz. A cirurgia raramente é a primeira opção indicada." },
     { q: "Preciso de encaminhamento médico?", a: "Não é obrigatório. O fisioterapeuta tem autonomia profissional para avaliar e tratar. Mas se houver necessidade de encaminhamento a outro especialista, você será orientado." },
-    { q: "O tratamento inclui uso de medicamentos?", a: "Não. A fisioterapia trabalha com técnicas manuais, exercício terapêutico e recursos específicos. Caso você já use medicação prescrita por médico, isso é respeitado — mas não é parte do meu trabalho prescrever." },
+    { q: "O tratamento inclui uso de medicamentos?", a: "Não. A fisioterapia trabalha com técnicas manuais, exercício terapêutico e recursos específicos. Caso você já use medicação prescrita por médico, isso é respeitado, mas não é parte do meu trabalho prescrever." },
     { q: "Atende pelo convênio?", a: "Entre em contato pelo WhatsApp para verificar as modalidades de atendimento disponíveis no momento." },
   ];
   const [open, setOpen] = useState<number | null>(0);
